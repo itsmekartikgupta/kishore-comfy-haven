@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ContactForm";
+import Navigation from "@/components/Navigation";
 import { 
   Bed, 
   Sofa, 
@@ -13,8 +14,13 @@ import {
   Star,
   CheckCircle,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  ExternalLink,
+  Award
 } from "lucide-react";
+import mattressHero from "@/assets/mattress-hero.jpg";
+import sofaHero from "@/assets/sofa-hero.jpg";
+import curtainsHero from "@/assets/curtains-hero.jpg";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -24,40 +30,88 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden">
+      <section id="home" className="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden pt-16">
         <div 
           className="absolute inset-0 opacity-90"
           style={{ background: 'var(--hero-gradient)' }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto text-white">
-          <div className="mb-6">
-            <Sparkles className="w-12 h-12 mx-auto mb-4 text-white/80" />
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Kishore Foam 
-              <span className="block text-white/90">Agencies</span>
-            </h1>
-          </div>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Your trusted partner for premium mattresses, furniture materials, and home comfort solutions since decades
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 transform hover:scale-105 transition-all duration-300 shadow-lg"
-              onClick={() => scrollToSection('products')}
-            >
-              Explore Products
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
-              onClick={() => scrollToSection('contact')}
-            >
-              Get Quote
-            </Button>
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Text content */}
+            <div className="text-white space-y-6">
+              <div className="mb-6">
+                <Sparkles className="w-12 h-12 mb-4 text-white/80" />
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                  Kishore Foam 
+                  <span className="block text-white/90">Agencies</span>
+                </h1>
+              </div>
+              
+              {/* 35 years experience badge */}
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                <Award className="w-5 h-5 text-white" />
+                <span className="text-white font-medium">35+ Years in Business • Oldest Showroom in Chandigarh Tricity</span>
+              </div>
+              
+              <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl leading-relaxed">
+                Your trusted partner for premium mattresses, furniture materials, and home comfort solutions since 1989
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                  onClick={() => scrollToSection('products')}
+                >
+                  Explore Products
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="bg-white/10 text-white border-white hover:bg-white/20 backdrop-blur-sm transition-all duration-300"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  Get Quote
+                </Button>
+              </div>
+            </div>
+            
+            {/* Right side - Product images */}
+            <div className="relative lg:block hidden">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <img 
+                    src={mattressHero} 
+                    alt="Premium Mattresses" 
+                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  />
+                  <img 
+                    src={curtainsHero} 
+                    alt="Curtain Materials" 
+                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  />
+                </div>
+                <div className="mt-8">
+                  <img 
+                    src={sofaHero} 
+                    alt="Sofa Materials" 
+                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  />
+                </div>
+              </div>
+              
+              {/* Floating rating card */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4">
+                <div className="flex items-center gap-2">
+                  <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                  <span className="font-bold text-foreground">4.9/5</span>
+                  <span className="text-muted-foreground">Customer Rating</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -301,8 +355,8 @@ const Index = () => {
                     <Phone className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                      <p className="text-muted-foreground">+91 98765 43210</p>
-                      <p className="text-muted-foreground">+91 87654 32109</p>
+                      <p className="text-muted-foreground">+91 9417151386</p>
+                      <p className="text-muted-foreground">+91 9216151386</p>
                     </div>
                   </div>
 
@@ -310,8 +364,7 @@ const Index = () => {
                     <Mail className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                      <p className="text-muted-foreground">info@kishorefoam.com</p>
-                      <p className="text-muted-foreground">sales@kishorefoam.com</p>
+                      <p className="text-muted-foreground">kishore_foam@rediffmail.com</p>
                     </div>
                   </div>
 
@@ -320,9 +373,9 @@ const Index = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Address</h3>
                       <p className="text-muted-foreground">
-                        123 Foam Street<br />
-                        Business District<br />
-                        City - 560001
+                        Shop Number 57, 58, 59, 60<br />
+                        Sector-14, Panchkula<br />
+                        Haryana, India
                       </p>
                     </div>
                   </div>
@@ -332,11 +385,40 @@ const Index = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Business Hours</h3>
                       <p className="text-muted-foreground">
-                        Monday - Saturday: 9:00 AM - 7:00 PM<br />
-                        Sunday: 10:00 AM - 5:00 PM
+                        Open all days<br />
+                        10:30 AM - 8:45 PM
                       </p>
                     </div>
                   </div>
+                </div>
+              </Card>
+              
+              {/* Google Maps with High Rating */}
+              <Card className="p-6 hover:shadow-lg transition-all duration-300">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    <Star className="w-6 h-6 text-yellow-500 fill-current" />
+                    <span className="text-2xl font-bold text-foreground">4.9/5</span>
+                    <span className="text-muted-foreground">Google Rating</span>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Highly rated by our customers for quality products and excellent service
+                  </p>
+                  <Button 
+                    asChild
+                    className="w-full"
+                  >
+                    <a 
+                      href="https://share.google/dZ1hK8yXB3GsLwbQ2" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      View on Google Maps
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </Button>
                 </div>
               </Card>
             </div>
@@ -351,7 +433,7 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Kishore Foam Agencies</h3>
               <p className="text-primary-foreground/80 mb-4">
-                Your trusted partner for premium home comfort solutions. Quality products, expert service, and customer satisfaction since decades.
+                Your trusted partner for premium home comfort solutions since 1989. Oldest showroom in Chandigarh Tricity with 35+ years of experience in quality products and expert service.
               </p>
             </div>
 
@@ -388,9 +470,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <div className="space-y-2 text-primary-foreground/80">
-                <p>+91 98765 43210</p>
-                <p>info@kishorefoam.com</p>
-                <p>123 Foam Street, Business District</p>
+                <p>+91 9417151386</p>
+                <p>+91 9216151386</p>
+                <p>kishore_foam@rediffmail.com</p>
+                <p>Shop 57-60, Sector-14, Panchkula</p>
               </div>
             </div>
           </div>
