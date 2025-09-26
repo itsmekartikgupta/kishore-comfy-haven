@@ -20,7 +20,6 @@ import {
 } from "lucide-react";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
-import curtainsHero from "@/assets/curtains-hero.jpg";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -41,23 +40,23 @@ const Index = () => {
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Text content */}
-            <div className="text-white space-y-6">
+            <div className="text-white space-y-6 animate-fade-in">
               <div className="mb-6">
-                <Sparkles className="w-12 h-12 mb-4 text-white/80" />
+                <p className="text-lg md:text-xl text-white/80 mb-4 font-medium">Premium Foam Solutions for Your Comfort</p>
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                   Kishore Foam 
                   <span className="block text-white/90">Agencies</span>
                 </h1>
               </div>
               
-              {/* 35 years experience badge */}
+              {/* Oldest showroom badge */}
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
                 <Award className="w-5 h-5 text-white" />
-                <span className="text-white font-medium">35+ Years in Business • Oldest Showroom in Chandigarh Tricity</span>
+                <span className="text-white font-medium">Oldest Showroom in Chandigarh Tricity</span>
               </div>
               
               <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl leading-relaxed">
-                Your trusted partner for premium mattresses, furniture materials, and home comfort solutions since 1989
+                From luxury mattresses to custom sofa materials, we provide high-quality foam products and professional services for your home and business needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -70,8 +69,8 @@ const Index = () => {
                 </Button>
                 <Button 
                   size="lg" 
-                  variant="secondary"
-                  className="bg-white/10 text-white border-white hover:bg-white/20 backdrop-blur-sm transition-all duration-300"
+                  variant="outline"
+                  className="bg-transparent text-white border-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all duration-300"
                   onClick={() => scrollToSection('contact')}
                 >
                   Get Quote
@@ -81,35 +80,54 @@ const Index = () => {
             
             {/* Right side - Product images */}
             <div className="relative lg:block hidden">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 <div className="space-y-4">
                   <img 
                     src={mattressHero} 
                     alt="Premium Mattresses" 
-                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 animate-fade-in"
+                    style={{ animationDelay: '0.2s' }}
                   />
-                  <img 
-                    src={curtainsHero} 
-                    alt="Curtain Materials" 
-                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                  />
-                </div>
-                <div className="mt-8">
                   <img 
                     src={sofaHero} 
                     alt="Sofa Materials" 
-                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 animate-fade-in"
+                    style={{ animationDelay: '0.4s' }}
                   />
                 </div>
               </div>
               
               {/* Floating rating card */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4">
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4 animate-scale-in">
                 <div className="flex items-center gap-2">
                   <Star className="w-5 h-5 text-yellow-500 fill-current" />
                   <span className="font-bold text-foreground">4.9/5</span>
                   <span className="text-muted-foreground">Customer Rating</span>
                 </div>
+              </div>
+              
+              {/* Action buttons */}
+              <div className="absolute -bottom-8 right-0 flex gap-3">
+                <a 
+                  href="tel:+919417151386" 
+                  className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
+                >
+                  <Phone className="w-6 h-6" />
+                </a>
+                <a 
+                  href="mailto:kishore_foam@rediffmail.com" 
+                  className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
+                >
+                  <Mail className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://share.google/dZ1hK8yXB3GsLwbQ2" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-primary backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary/80 transition-all duration-300 transform hover:scale-110"
+                >
+                  <MapPin className="w-6 h-6" />
+                </a>
               </div>
             </div>
           </div>
@@ -119,7 +137,7 @@ const Index = () => {
       {/* About Us Section */}
       <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About Us</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Established with a commitment to quality and customer satisfaction, Kishore Foam Agencies has been serving the community with premium home comfort solutions.
@@ -127,9 +145,9 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale">
               <CardHeader>
-                <Star className="w-12 h-12 mx-auto text-primary mb-4" />
+                <Bed className="w-12 h-12 mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">Quality Products</CardTitle>
               </CardHeader>
               <CardContent>
@@ -137,7 +155,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale" style={{ animationDelay: '0.1s' }}>
               <CardHeader>
                 <CheckCircle className="w-12 h-12 mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">Expert Service</CardTitle>
@@ -147,7 +165,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale" style={{ animationDelay: '0.2s' }}>
               <CardHeader>
                 <Phone className="w-12 h-12 mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">Customer Care</CardTitle>
@@ -201,7 +219,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in">
               <CardHeader className="text-center">
                 <Shirt className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <CardTitle className="text-xl">Curtain Cloth</CardTitle>
@@ -480,7 +498,7 @@ const Index = () => {
 
           <div className="border-t border-primary-foreground/20 pt-8 text-center">
             <p className="text-primary-foreground/80">
-              © 2024 Kishore Foam Agencies. All rights reserved.
+              © 2025 Kishore Foam Agencies. All rights reserved. | Designed with excellence for your comfort
             </p>
           </div>
         </div>
