@@ -201,7 +201,7 @@ All colors MUST be HSL.
   }
   
   .animate-bounce-subtle {
-    animation: bounce-subtle 2s infinite;
+    animation: bounce-subtle 4s infinite;
   }
   
   /* Enhanced shadow utilities */

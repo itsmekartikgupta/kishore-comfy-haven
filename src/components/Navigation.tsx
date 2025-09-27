@@ -22,33 +22,34 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-lg transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-xl border-b border-primary/10 shadow-2xl transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-18">
           {/* Logo */}
           <div 
-            className="flex-shrink-0 cursor-pointer transition-transform duration-200 hover:scale-105"
+            className="flex-shrink-0 cursor-pointer transition-all duration-300 hover:scale-110"
             onClick={refreshPage}
           >
-            <h1 className="text-xl font-bold text-gray-800 hover:text-gray-700 transition-colors duration-200">
-              Kishore <span className="text-gray-700">Foam Agencies</span>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-primary bg-clip-text text-transparent hover:from-primary hover:to-gray-800 transition-all duration-300">
+              Kishore <span className="font-extrabold">Foam Agencies</span>
             </h1>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-center space-x-6">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:bg-white/20 backdrop-blur-sm"
+                  className="relative text-foreground hover:text-primary px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary/5 backdrop-blur-sm group"
                 >
                   {item.label}
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </button>
               ))}
               <Button 
-                className="ml-4 bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse hover:animate-none"
+                className="ml-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 animate-pulse hover:animate-none rounded-xl px-6 py-2 font-semibold"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact
@@ -70,18 +71,18 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/90 backdrop-blur-md border-t border-white/20 rounded-b-lg shadow-lg">
+            <div className="px-4 pt-4 pb-6 space-y-3 sm:px-6 bg-white/95 backdrop-blur-xl border-t border-primary/10 rounded-b-2xl shadow-2xl">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block text-foreground hover:text-primary hover:bg-white/20 px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-200 backdrop-blur-sm"
+                  className="block text-foreground hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-300 backdrop-blur-sm"
                 >
                   {item.label}
                 </button>
               ))}
               <Button 
-                className="w-full mt-2 bg-primary hover:bg-primary/90 text-white shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="w-full mt-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white shadow-xl transform hover:scale-105 transition-all duration-300 rounded-xl py-3 font-semibold"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact
