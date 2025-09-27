@@ -156,7 +156,7 @@ export function ContactForm() {
                     <Textarea 
                       placeholder="Tell us about your requirements..."
                       rows={4}
-                      className="resize-none transition-colors duration-200 focus:ring-primary"
+                      className="resize-y transition-colors duration-200 focus:ring-primary"
                       {...field} 
                     />
                   </FormControl>

@@ -30,8 +30,8 @@ const Navigation = () => {
             className="flex-shrink-0 cursor-pointer transition-transform duration-200 hover:scale-105"
             onClick={refreshPage}
           >
-            <h1 className="text-xl font-bold text-primary hover:text-primary/80 transition-colors duration-200">
-              Kishore <span className="text-primary/70">Foam Agencies</span>
+            <h1 className="text-xl font-bold text-gray-800 hover:text-gray-700 transition-colors duration-200">
+              Kishore <span className="text-gray-700">Foam Agencies</span>
             </h1>
           </div>
 
