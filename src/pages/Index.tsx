@@ -32,36 +32,42 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden pt-16">
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-16">
         <div 
           className="absolute inset-0 opacity-90"
           style={{ background: 'var(--hero-gradient)' }}
         />
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left side - Text content */}
-            <div className="text-white space-y-6 animate-fade-in">
-              <div className="mb-6">
-                <p className="text-lg md:text-xl text-white/80 mb-4 font-medium">Premium Foam Solutions for Your Comfort</p>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                  Kishore Foam 
-                  <span className="block text-white/90">Agencies</span>
+            <div className="text-white space-y-8 animate-fade-in text-center lg:text-left">
+              <div className="mb-8">
+                <p className="text-lg md:text-xl text-white/80 mb-6 font-medium animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                  Premium Foam Solutions for Your Comfort
+                </p>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight animate-bounce-in">
+                  <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent animate-pulse">
+                    Kishore Foam
+                  </span>
+                  <span className="block text-white/90 mt-2 animate-slide-up" style={{ animationDelay: '0.5s' }}>
+                    Agencies
+                  </span>
                 </h1>
               </div>
               
               {/* Oldest showroom badge */}
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6 animate-fade-in hover:bg-white/30 transition-all duration-300" style={{ animationDelay: '0.7s' }}>
                 <Award className="w-5 h-5 text-white" />
-                <span className="text-white font-medium">Oldest Showroom in Chandigarh Tricity</span>
+                <span className="text-white font-medium text-sm md:text-base">Oldest Showroom in Chandigarh Tricity</span>
               </div>
               
-              <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl mb-10 text-white/90 max-w-2xl leading-relaxed animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 From luxury mattresses to custom sofa materials, we provide high-quality foam products and professional services for your home and business needs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-6 animate-fade-in" style={{ animationDelay: '1.1s' }}>
                 <Button 
                   size="lg" 
-                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold"
                   onClick={() => scrollToSection('products')}
                 >
                   Explore Products
@@ -70,7 +76,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="bg-transparent text-white border-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all duration-300"
+                  className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold"
                   onClick={() => scrollToSection('contact')}
                 >
                   Get Quote
@@ -79,52 +85,63 @@ const Index = () => {
             </div>
             
             {/* Right side - Product images */}
-            <div className="relative lg:block hidden">
-              <div className="grid grid-cols-1 gap-4">
-                <div className="space-y-4">
-                  <img 
-                    src={mattressHero} 
-                    alt="Premium Mattresses" 
-                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 animate-fade-in"
-                    style={{ animationDelay: '0.2s' }}
-                  />
-                  <img 
-                    src={sofaHero} 
-                    alt="Sofa Materials" 
-                    className="rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 animate-fade-in"
-                    style={{ animationDelay: '0.4s' }}
-                  />
-                </div>
+            <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <img 
+                  src={mattressHero} 
+                  alt="Premium Mattresses" 
+                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-64 md:h-80 object-cover"
+                  style={{ animationDelay: '0.3s' }}
+                />
+                <img 
+                  src={sofaHero} 
+                  alt="Sofa Materials" 
+                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-64 md:h-80 object-cover"
+                  style={{ animationDelay: '0.5s' }}
+                />
               </div>
               
               {/* Floating rating card */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4 animate-scale-in">
-                <div className="flex items-center gap-2">
-                  <Star className="w-5 h-5 text-yellow-500 fill-current" />
-                  <span className="font-bold text-foreground">4.9/5</span>
-                  <span className="text-muted-foreground">Customer Rating</span>
+              <a 
+                href="https://share.google/76zlAwYTmDzjjviDr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="absolute -bottom-6 -left-4 bg-white rounded-xl shadow-2xl p-6 animate-scale-in hover:shadow-3xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                style={{ animationDelay: '0.7s' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  <div className="text-left">
+                    <div className="font-bold text-foreground text-lg group-hover:text-primary transition-colors">4.95/5</div>
+                    <div className="text-muted-foreground text-sm">Customer Rating</div>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors ml-2" />
                 </div>
-              </div>
+              </a>
               
               {/* Action buttons */}
-              <div className="absolute -bottom-8 right-0 flex gap-3">
+              <div className="absolute -bottom-8 right-0 flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <a 
                   href="tel:+919417151386" 
-                  className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
+                  className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
                   <Phone className="w-6 h-6" />
                 </a>
                 <a 
                   href="mailto:kishore_foam@rediffmail.com" 
-                  className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
+                  className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
                   <Mail className="w-6 h-6" />
                 </a>
                 <a 
-                  href="https://share.google/dZ1hK8yXB3GsLwbQ2" 
+                  href="https://share.google/76zlAwYTmDzjjviDr" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-primary backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary/80 transition-all duration-300 transform hover:scale-110"
+                  className="w-14 h-14 bg-primary backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary/80 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
                   <MapPin className="w-6 h-6" />
                 </a>
@@ -415,8 +432,12 @@ const Index = () => {
               <Card className="p-6 hover:shadow-lg transition-all duration-300">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 mb-4">
-                    <Star className="w-6 h-6 text-yellow-500 fill-current" />
-                    <span className="text-2xl font-bold text-foreground">4.9/5</span>
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-2xl font-bold text-foreground">4.95/5</span>
                     <span className="text-muted-foreground">Google Rating</span>
                   </div>
                   <p className="text-muted-foreground mb-4">
@@ -424,10 +445,10 @@ const Index = () => {
                   </p>
                   <Button 
                     asChild
-                    className="w-full"
+                    className="w-full transform hover:scale-105 transition-all duration-300"
                   >
                     <a 
-                      href="https://share.google/dZ1hK8yXB3GsLwbQ2" 
+                      href="https://share.google/76zlAwYTmDzjjviDr" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2"
