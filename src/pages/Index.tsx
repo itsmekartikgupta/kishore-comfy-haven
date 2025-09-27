@@ -2,22 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
-import { 
-  Bed, 
-  Sofa, 
-  Shirt, 
-  Package, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Sparkles,
-  ExternalLink,
-  Award
-} from "lucide-react";
+import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleCheck as CheckCircle, ArrowRight, Sparkles, ExternalLink, Award } from "lucide-react";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
 
