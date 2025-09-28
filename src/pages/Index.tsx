@@ -84,28 +84,6 @@ const Index = () => {
                 />
               </div>
               
-              {/* Floating rating card */}
-              <a 
-                href="https://share.google/76zlAwYTmDzjjviDr" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="absolute -bottom-8 left-0 right-0 mx-auto w-fit bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
-                style={{ animationDelay: '0.7s' }}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-                    ))}
-                  </div>
-                  <div className="text-left">
-                    <div className="font-bold text-foreground text-base group-hover:text-primary transition-colors font-sans">4.95/5</div>
-                    <div className="text-muted-foreground text-sm font-sans">Rating</div>
-                  </div>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors ml-1" />
-                </div>
-              </a>
-              
               {/* Action buttons */}
               <div className="absolute -bottom-8 left-0 right-0 mx-auto w-fit flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <a 
@@ -129,13 +107,35 @@ const Index = () => {
                   <MapPin className="w-7 h-7" />
                 </a>
               </div>
+              
+              {/* Floating rating card - positioned below action buttons */}
+              <a 
+                href="https://share.google/76zlAwYTmDzjjviDr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="absolute -bottom-24 left-0 right-0 mx-auto w-fit bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                style={{ animationDelay: '0.7s' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  <div className="text-left">
+                    <div className="font-bold text-foreground text-base group-hover:text-primary transition-colors font-sans">4.95/5</div>
+                    <div className="text-muted-foreground text-sm font-sans">Rating</div>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors ml-1" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gradient Transition */}
-      <div className="h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+      {/* Hero to About Gradient Transition */}
+      <div className="h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
 
       {/* About Us Section */}
       <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
@@ -470,6 +470,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact to Footer Gradient Transition */}
+      <div className="h-32 bg-gradient-to-b from-transparent via-primary/10 to-gray-900/50"></div>
 
       {/* Footer */}
       <footer className="py-16 px-4" style={{ background: 'var(--hero-gradient)' }}>
