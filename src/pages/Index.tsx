@@ -17,7 +17,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[120vh] flex items-center justify-center px-4 overflow-hidden pt-20">
+      <section id="home" className="relative min-h-[120vh] flex items-center justify-center px-4 overflow-hidden pt-24">
         <div 
           className="absolute inset-0 opacity-90"
           style={{ background: 'var(--hero-gradient)' }}
@@ -25,32 +25,32 @@ const Index = () => {
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left side - Text content */}
-            <div className="text-white space-y-8 animate-fade-in text-center lg:text-left">
+            <div className="text-white space-y-8 animate-fade-in text-center lg:text-left font-sans">
               <div className="mb-12">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 leading-tight animate-bounce-in">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 leading-tight animate-bounce-in font-sans">
                   <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent animate-pulse">
                     Kishore Foam
                   </span>
-                  <span className="block text-white/90 mt-2 animate-slide-up font-extralight" style={{ animationDelay: '0.5s' }}>
+                  <span className="block text-white/90 mt-2 animate-slide-up font-extralight font-sans" style={{ animationDelay: '0.5s' }}>
                     Agencies
                   </span>
                 </h1>
               </div>
               
               {/* Oldest showroom badge */}
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 animate-fade-in hover:bg-white/30 transition-all duration-300" style={{ animationDelay: '0.7s' }}>
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 animate-fade-in hover:bg-white/30 transition-all duration-300 font-sans" style={{ animationDelay: '0.7s' }}>
                 <Award className="w-5 h-5 text-white" />
                 <span className="text-white font-light text-sm md:text-base">Oldest Showroom in Chandigarh Tricity</span>
               </div>
               
-              <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/90 max-w-2xl leading-relaxed animate-fade-in font-light" style={{ animationDelay: '0.9s' }}>
+              <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/90 max-w-2xl leading-relaxed animate-fade-in font-light font-sans" style={{ animationDelay: '0.9s' }}>
                 High-Quality Mattresses and Tailored Foam Solutions for Every Space
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 animate-fade-in" style={{ animationDelay: '1.1s' }}>
                 <Button 
                   size="lg" 
-                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold"
+                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold font-sans"
                   onClick={() => scrollToSection('products')}
                 >
                   Explore Products
@@ -59,7 +59,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold"
+                  className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold font-sans"
                   onClick={() => scrollToSection('contact')}
                 >
                   Get Quote
@@ -68,18 +68,18 @@ const Index = () => {
             </div>
             
             {/* Right side - Product images */}
-            <div className="relative -mt-16 lg:-mt-24">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            <div className="relative -mt-32 lg:-mt-40">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
                 <img 
                   src={mattressHero} 
                   alt="Premium Mattresses" 
-                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-64 md:h-80 object-cover"
+                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-56 md:h-72 object-cover"
                   style={{ animationDelay: '0.3s' }}
                 />
                 <img 
                   src={sofaHero} 
                   alt="Sofa Materials" 
-                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-64 md:h-80 object-cover"
+                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-56 md:h-72 object-cover"
                   style={{ animationDelay: '0.5s' }}
                 />
               </div>
@@ -89,7 +89,7 @@ const Index = () => {
                 href="https://share.google/76zlAwYTmDzjjviDr" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="absolute -bottom-2 -left-2 bg-white rounded-lg shadow-xl p-3 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                className="absolute -bottom-8 -left-2 bg-white rounded-lg shadow-xl p-3 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
                 style={{ animationDelay: '0.7s' }}
               >
                 <div className="flex items-center gap-2">
@@ -99,15 +99,15 @@ const Index = () => {
                     ))}
                   </div>
                   <div className="text-left">
-                    <div className="font-bold text-foreground text-sm group-hover:text-primary transition-colors">4.95/5</div>
-                    <div className="text-muted-foreground text-xs">Rating</div>
+                    <div className="font-bold text-foreground text-sm group-hover:text-primary transition-colors font-sans">4.95/5</div>
+                    <div className="text-muted-foreground text-xs font-sans">Rating</div>
                   </div>
                   <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors ml-1" />
                 </div>
               </a>
               
               {/* Action buttons */}
-              <div className="absolute -bottom-4 right-0 flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <div className="absolute -bottom-8 right-0 flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <a 
                   href="tel:+919417151386" 
                   className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
@@ -138,8 +138,8 @@ const Index = () => {
       <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About Us</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">About Us</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-sans">
               Established with a commitment to quality and customer satisfaction, Kishore Foam Agencies has been serving the community with premium home comfort solutions.
             </p>
           </div>
@@ -148,30 +148,30 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale">
               <CardHeader>
                 <Bed className="w-12 h-12 mx-auto text-primary mb-4" />
-                <CardTitle className="text-xl">Quality Products</CardTitle>
+                <CardTitle className="text-xl font-sans">Quality Products</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">We source only the finest materials and work with trusted brands to ensure lasting comfort and durability.</p>
+                <p className="text-muted-foreground font-sans">We source only the finest materials and work with trusted brands to ensure lasting comfort and durability.</p>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale" style={{ animationDelay: '0.1s' }}>
               <CardHeader>
                 <CheckCircle className="w-12 h-12 mx-auto text-primary mb-4" />
-                <CardTitle className="text-xl">Expert Service</CardTitle>
+                <CardTitle className="text-xl font-sans">Expert Service</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Our experienced team provides professional sofa making and dry cleaning services with attention to detail.</p>
+                <p className="text-muted-foreground font-sans">Our experienced team provides professional sofa making and dry cleaning services with attention to detail.</p>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale" style={{ animationDelay: '0.2s' }}>
               <CardHeader>
                 <Phone className="w-12 h-12 mx-auto text-primary mb-4" />
-                <CardTitle className="text-xl">Customer Care</CardTitle>
+                <CardTitle className="text-xl font-sans">Customer Care</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">We believe in building lasting relationships through exceptional customer service and support.</p>
+                <p className="text-muted-foreground font-sans">We believe in building lasting relationships through exceptional customer service and support.</p>
               </CardContent>
             </Card>
           </div>
@@ -182,8 +182,8 @@ const Index = () => {
       <section id="products" className="py-20 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Products</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Our Products</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
               Discover our comprehensive range of home comfort products designed to enhance your living space.
             </p>
           </div>
@@ -192,11 +192,11 @@ const Index = () => {
             <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <CardHeader className="text-center">
                 <Bed className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl">Premium Mattresses</CardTitle>
+                <CardTitle className="text-xl font-sans">Premium Mattresses</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">High-quality mattresses for optimal sleep comfort and support. Available in various sizes and firmness levels.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <p className="text-muted-foreground mb-4 font-sans">High-quality mattresses for optimal sleep comfort and support. Available in various sizes and firmness levels.</p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
                   <li>• Memory foam mattresses</li>
                   <li>• Spring mattresses</li>
                   <li>• Orthopedic mattresses</li>
@@ -207,11 +207,11 @@ const Index = () => {
             <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <CardHeader className="text-center">
                 <Sofa className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl">Sofa Materials</CardTitle>
+                <CardTitle className="text-xl font-sans">Sofa Materials</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">Premium foam and fabric materials for sofa making and upholstery work.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <p className="text-muted-foreground mb-4 font-sans">Premium foam and fabric materials for sofa making and upholstery work.</p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
                   <li>• High-density foam</li>
                   <li>• Upholstery fabrics</li>
                   <li>• Springs and hardware</li>

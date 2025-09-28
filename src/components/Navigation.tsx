@@ -24,13 +24,13 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-xl border-b border-primary/10 shadow-2xl transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div 
             className="flex-shrink-0 cursor-pointer transition-all duration-300 hover:scale-110"
             onClick={refreshPage}
           >
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-primary bg-clip-text text-transparent hover:from-primary hover:to-gray-800 transition-all duration-300">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-primary bg-clip-text text-transparent hover:from-primary hover:to-gray-800 transition-all duration-300 font-sans">
               Kishore <span className="font-extrabold">Foam Agencies</span>
             </h1>
           </div>
@@ -42,14 +42,14 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="relative text-foreground hover:text-primary px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary/5 backdrop-blur-sm group"
+                  className="relative text-foreground hover:text-primary px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary/5 backdrop-blur-sm group font-sans"
                 >
                   {item.label}
                   <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </button>
               ))}
               <Button 
-                className="ml-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 animate-pulse hover:animate-none rounded-xl px-6 py-2 font-semibold"
+                className="ml-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 animate-pulse hover:animate-none rounded-xl px-6 py-2 font-semibold font-sans"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact
@@ -76,13 +76,13 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block text-foreground hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-300 backdrop-blur-sm"
+                  className="block text-foreground hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-300 backdrop-blur-sm font-sans"
                 >
                   {item.label}
                 </button>
               ))}
               <Button 
-                className="w-full mt-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white shadow-xl transform hover:scale-105 transition-all duration-300 rounded-xl py-3 font-semibold"
+                className="w-full mt-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white shadow-xl transform hover:scale-105 transition-all duration-300 rounded-xl py-3 font-semibold font-sans"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact
