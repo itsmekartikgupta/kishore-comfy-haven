@@ -27,11 +27,11 @@ const Index = () => {
             {/* Left side - Text content */}
             <div className="text-white space-y-8 animate-fade-in text-center lg:text-left font-sans">
               <div className="mb-12">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 leading-tight animate-bounce-in font-sans">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold mb-8 leading-tight animate-bounce-in font-sans">
                   <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent animate-pulse">
                     Kishore Foam
                   </span>
-                  <span className="block text-white/90 mt-2 animate-slide-up font-extralight font-sans" style={{ animationDelay: '0.5s' }}>
+                  <span className="block text-white/90 mt-2 animate-slide-up font-light font-sans" style={{ animationDelay: '0.5s' }}>
                     Agencies
                   </span>
                 </h1>
@@ -50,7 +50,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 animate-fade-in" style={{ animationDelay: '1.1s' }}>
                 <Button 
                   size="lg" 
-                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold font-sans"
+                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold font-sans border-b-4 border-primary"
                   onClick={() => scrollToSection('products')}
                 >
                   Explore Products
@@ -89,50 +89,53 @@ const Index = () => {
                 href="https://share.google/76zlAwYTmDzjjviDr" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="absolute -bottom-8 -left-2 bg-white rounded-lg shadow-xl p-3 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                className="absolute -bottom-8 left-0 right-0 mx-auto w-fit bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
                 style={{ animationDelay: '0.7s' }}
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 text-yellow-500 fill-current" />
+                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
                     ))}
                   </div>
                   <div className="text-left">
-                    <div className="font-bold text-foreground text-sm group-hover:text-primary transition-colors font-sans">4.95/5</div>
-                    <div className="text-muted-foreground text-xs font-sans">Rating</div>
+                    <div className="font-bold text-foreground text-base group-hover:text-primary transition-colors font-sans">4.95/5</div>
+                    <div className="text-muted-foreground text-sm font-sans">Rating</div>
                   </div>
-                  <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors ml-1" />
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors ml-1" />
                 </div>
               </a>
               
               {/* Action buttons */}
-              <div className="absolute -bottom-8 right-0 flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <div className="absolute -bottom-8 left-0 right-0 mx-auto w-fit flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <a 
                   href="tel:+919417151386" 
-                  className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
-                  <Phone className="w-6 h-6" />
+                  <Phone className="w-7 h-7" />
                 </a>
                 <a 
                   href="mailto:kishore_foam@rediffmail.com" 
-                  className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
-                  <Mail className="w-6 h-6" />
+                  <Mail className="w-7 h-7" />
                 </a>
                 <a 
                   href="https://share.google/76zlAwYTmDzjjviDr" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-14 h-14 bg-primary backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary/80 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  className="w-16 h-16 bg-primary backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary/80 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
-                  <MapPin className="w-6 h-6" />
+                  <MapPin className="w-7 h-7" />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Gradient Transition */}
+      <div className="h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
 
       {/* About Us Section */}
       <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
@@ -177,6 +180,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Gradient Transition */}
+      <div className="h-32 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent"></div>
 
       {/* Products Section */}
       <section id="products" className="py-20 px-4 bg-background">
@@ -267,6 +273,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Gradient Transition */}
+      <div className="h-24 bg-gradient-to-b from-transparent via-primary/5 to-primary/10"></div>
+
       {/* Services Section */}
       <section id="services" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
         <div className="max-w-6xl mx-auto">
@@ -316,6 +325,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Gradient Transition */}
+      <div className="h-24 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent"></div>
 
       {/* Brands Section */}
       <section id="brands" className="py-20 px-4 bg-background">
