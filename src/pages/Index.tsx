@@ -47,19 +47,19 @@ const Index = () => {
                 High-Quality Mattresses and Tailored Foam Solutions for Every Space
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 animate-fade-in" style={{ animationDelay: '1.1s' }}>
+              <div className="flex flex-col sm:flex-row gap-6 animate-fade-in max-w-md sm:max-w-none mx-auto sm:mx-0" style={{ animationDelay: '1.1s' }}>
                 <Button 
                   size="lg" 
-                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold font-sans border-b-4 border-primary"
+                  className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold font-sans border-b-4 border-primary whitespace-nowrap"
                   onClick={() => scrollToSection('products')}
                 >
                   Explore Products
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5" />
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl animate-bounce-subtle px-8 py-4 text-lg font-semibold font-sans"
+                  className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl animate-bounce-subtle px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold font-sans whitespace-nowrap"
                   onClick={() => scrollToSection('contact')}
                 >
                   Get Quote
@@ -113,7 +113,7 @@ const Index = () => {
                 href="https://share.google/76zlAwYTmDzjjviDr" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="absolute -bottom-24 left-0 right-0 mx-auto w-fit bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                className="absolute -bottom-32 left-0 right-0 mx-auto w-fit bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
                 style={{ animationDelay: '0.7s' }}
               >
                 <div className="flex items-center gap-3">
@@ -227,12 +227,15 @@ const Index = () => {
 
             <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in">
               <CardHeader className="text-center">
-                <Shirt className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl">Curtain Cloth</CardTitle>
+                <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 16H7V7h10v12z"/>
+                  <path d="M9 9h6v2H9zM9 13h6v2H9z"/>
+                </svg>
+                <CardTitle className="text-xl font-sans">Curtain Cloth</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">Beautiful curtain fabrics to enhance your home's aesthetic appeal.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <p className="text-muted-foreground mb-4 font-sans">Beautiful curtain fabrics to enhance your home's aesthetic appeal.</p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
                   <li>• Designer patterns</li>
                   <li>• Blackout curtains</li>
                   <li>• Custom sizing</li>
@@ -258,14 +261,50 @@ const Index = () => {
             <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <CardHeader className="text-center">
                 <Bed className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl">Pillows</CardTitle>
+                <CardTitle className="text-xl font-sans">Pillows</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">Soft and supportive pillows for better sleep quality.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <p className="text-muted-foreground mb-4 font-sans">Soft and supportive pillows for better sleep quality.</p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
                   <li>• Memory foam pillows</li>
                   <li>• Fiber fill pillows</li>
                   <li>• Orthopedic pillows</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <CardHeader className="text-center">
+                <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 8h16v8H4V8z"/>
+                  <path d="M6 10h2v4H6zM10 10h2v4h-2zM14 10h2v4h-2z"/>
+                </svg>
+                <CardTitle className="text-xl font-sans">Mattress Topper</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4 font-sans">Premium mattress toppers for enhanced comfort and support.</p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                  <li>• Memory foam toppers</li>
+                  <li>• Cooling gel toppers</li>
+                  <li>• Various thickness options</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <CardHeader className="text-center">
+                <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm2 0h14v14H5V5z"/>
+                  <path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h6v2H7z"/>
+                </svg>
+                <CardTitle className="text-xl font-sans">Mattress Protector</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4 font-sans">Waterproof and breathable mattress protectors for hygiene.</p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                  <li>• Waterproof protection</li>
+                  <li>• Breathable fabric</li>
+                  <li>• Easy to wash</li>
                 </ul>
               </CardContent>
             </Card>
@@ -421,6 +460,23 @@ const Index = () => {
                     </div>
                   </a>
 
+                  <a 
+                    href="https://maps.google.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-4 p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors duration-200 cursor-pointer group"
+                  >
+                    <MapPin className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Second Location</h3>
+                      <p className="text-muted-foreground">
+                        Sco. 28, Sector - 5<br />
+                        MDC, Panchkula<br />
+                        Haryana, India
+                      </p>
+                    </div>
+                  </a>
+
                   <div className="flex items-start gap-4">
                     <Clock className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                     <div>
@@ -519,16 +575,27 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold text-white mb-4">Location</h4>
-              <a 
-                href="https://share.google/76zlAwYTmDzjjviDr"
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-start gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
-              >
-                <MapPin className="w-4 h-4 mt-0.5" />
-                <span className="text-sm">Shop No. 57, 58, 59, 60<br />Sector 14, Panchkula, Haryana</span>
-              </a>
+              <h4 className="font-semibold text-white mb-4">Locations</h4>
+              <div className="space-y-3">
+                <a 
+                  href="https://share.google/76zlAwYTmDzjjviDr"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  <MapPin className="w-4 h-4 mt-0.5" />
+                  <span className="text-sm">Shop No. 57, 58, 59, 60<br />Sector 14, Panchkula, Haryana</span>
+                </a>
+                <a 
+                  href="https://maps.google.com"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  <MapPin className="w-4 h-4 mt-0.5" />
+                  <span className="text-sm">Sco. 28, Sector - 5<br />MDC, Panchkula, Haryana</span>
+                </a>
+              </div>
             </div>
           </div>
           
