@@ -85,26 +85,26 @@ const Index = () => {
               </div>
               
               {/* Action buttons */}
-              <div className="absolute bottom-16 md:-bottom-8 left-0 right-0 mx-auto w-fit flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <div className="absolute bottom-16 md:-bottom-8 left-0 right-0 mx-auto w-fit flex gap-2 sm:gap-4 px-4 justify-center animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <a 
                   href="tel:+919417151386" 
-                  className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
-                  <Phone className="w-7 h-7" />
+                  <Phone className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
                 <a 
                   href="mailto:kishore_foam@rediffmail.com" 
-                  className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
-                  <Mail className="w-7 h-7" />
+                  <Mail className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
                 <a 
                   href="https://share.google/76zlAwYTmDzjjviDr" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-16 h-16 bg-primary backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary/80 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  className="w-12 h-12 sm:w-16 sm:h-16 bg-primary backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary/80 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
                 >
-                  <MapPin className="w-7 h-7" />
+                  <MapPin className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
               </div>
               
