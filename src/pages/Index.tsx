@@ -113,7 +113,7 @@ const Index = () => {
                 href="https://share.google/76zlAwYTmDzjjviDr" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="md:absolute md:left-0 md:right-0 bottom-0 md:-bottom-32 mx-auto w-full max-w-sm bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group mt-4 md:mt-0"
+                className="absolute -bottom-20 md:-bottom-32 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer group"
                 style={{ animationDelay: '0.7s' }}
               >
                 <div className="flex items-center gap-3">
