@@ -17,7 +17,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[120vh] flex items-center justify-center px-4 overflow-hidden pt-24">
+      <section id="home" className="relative min-h-screen md:min-h-[120vh] flex items-center justify-center px-4 overflow-hidden pt-24 pb-8 md:pb-0">
         <div 
           className="absolute inset-0 opacity-90"
           style={{ background: 'var(--hero-gradient)' }}
@@ -68,24 +68,24 @@ const Index = () => {
             </div>
             
             {/* Right side - Product images */}
-            <div className="relative -mt-32 lg:-mt-40">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+            <div className="relative mt-8 md:-mt-16 lg:-mt-32">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-20 md:mb-16">
                 <img 
                   src={mattressHero} 
                   alt="Premium Mattresses" 
-                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-56 md:h-72 object-cover"
+                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-48 md:h-56 lg:h-72 object-cover"
                   style={{ animationDelay: '0.3s' }}
                 />
                 <img 
                   src={sofaHero} 
                   alt="Sofa Materials" 
-                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-56 md:h-72 object-cover"
+                  className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-48 md:h-56 lg:h-72 object-cover"
                   style={{ animationDelay: '0.5s' }}
                 />
               </div>
               
               {/* Action buttons */}
-              <div className="absolute -bottom-8 left-0 right-0 mx-auto w-fit flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <div className="absolute -bottom-16 md:-bottom-8 left-0 right-0 mx-auto w-fit flex gap-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <a 
                   href="tel:+919417151386" 
                   className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
@@ -113,7 +113,7 @@ const Index = () => {
                 href="https://share.google/76zlAwYTmDzjjviDr" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="absolute -bottom-32 left-0 right-0 mx-auto w-fit bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                className="absolute -bottom-32 md:-bottom-32 left-0 right-0 mx-auto w-fit bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
                 style={{ animationDelay: '0.7s' }}
               >
                 <div className="flex items-center gap-3">
@@ -135,7 +135,7 @@ const Index = () => {
       </section>
 
       {/* Hero to About Gradient Transition */}
-      <div className="h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
+      <div className="h-16 md:h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
 
       {/* About Us Section */}
       <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
