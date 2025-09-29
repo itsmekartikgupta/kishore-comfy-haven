@@ -85,7 +85,7 @@ const Index = () => {
               </div>
               
               {/* Action buttons */}
-              <div className="absolute bottom-16 md:-bottom-8 left-0 right-0 mx-auto w-fit flex gap-2 sm:gap-4 px-4 justify-center animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <div className="md:absolute bottom-16 md:-bottom-8 left-0 right-0 mx-auto w-full md:w-fit flex justify-center gap-3 sm:gap-4 px-4 mt-2 animate-fade-in z-10" style={{ animationDelay: '0.9s' }}>
                 <a 
                   href="tel:+919417151386" 
                   className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
@@ -113,7 +113,7 @@ const Index = () => {
                 href="https://share.google/76zlAwYTmDzjjviDr" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="absolute bottom-0 md:-bottom-32 left-0 right-0 mx-auto w-fit bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                className="md:absolute md:left-0 md:right-0 bottom-0 md:-bottom-32 mx-auto w-full max-w-sm bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer group mt-4 md:mt-0"
                 style={{ animationDelay: '0.7s' }}
               >
                 <div className="flex items-center gap-3">
