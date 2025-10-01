@@ -628,7 +628,7 @@ const Index = () => {
       <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
 
       {/* Customer Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4 bg-background" aria-label="Customer Testimonials">
+      <section id="testimonials" className="py-20 px-4 bg-background" aria-labelledby="testimonials-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">What Our Customers Say</h2>
