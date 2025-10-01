@@ -636,7 +636,7 @@ const Index = () => {
               Real experiences from our valued customers in Panchkula
             </p>
             <a 
-              href="https://g.co/kgs/your-business-link" 
+              href="https://share.google/B5m3TXktZANhEQZNj" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
@@ -894,6 +894,24 @@ const Index = () => {
                 >
                   <MapPin className="w-4 h-4 mt-0.5" />
                   <span className="text-sm">Sco. 28, Sector - 5<br />MDC, Panchkula, Haryana</span>
+                </a>
+                <a 
+                  href="https://maps.google.com"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  <MapPin className="w-4 h-4 mt-0.5" />
+                  <span className="text-sm">Sco.63, Sector - 11<br />Panchkula, Haryana</span>
+                </a>
+                <a 
+                  href="https://maps.google.com"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  <MapPin className="w-4 h-4 mt-0.5" />
+                  <span className="text-sm">254, Rally Sector - 12A<br />Panchkula (Godown), Haryana</span>
                 </a>
               </div>
             </div>
