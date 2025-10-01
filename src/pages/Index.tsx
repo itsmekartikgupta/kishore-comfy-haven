@@ -333,7 +333,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <CardHeader>
                 <Sofa className="w-12 h-12 text-primary mb-4" />
@@ -348,6 +348,24 @@ const Index = () => {
                   <li>• Quality foam and spring construction</li>
                   <li>• Wide fabric selection</li>
                   <li>• Professional installation</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <CardHeader>
+                <Bed className="w-12 h-12 text-primary mb-4" />
+                <CardTitle className="text-2xl">Mattress Cutting & Shaping</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Professional mattress cutting and shaping services to fit your specific requirements and space dimensions.
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Custom size cutting</li>
+                  <li>• Shape customization</li>
+                  <li>• Precision measurements</li>
+                  <li>• On-site service available</li>
                 </ul>
               </CardContent>
             </Card>
@@ -428,7 +446,7 @@ const Index = () => {
             <div className="space-y-8">
               <Card className="p-6 hover:shadow-lg transition-all duration-300">
                 <div className="space-y-6">
-                  <a 
+                  <a
                     href="tel:+919417151386"
                     className="flex items-start gap-4 p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200 cursor-pointer group"
                   >
@@ -437,6 +455,7 @@ const Index = () => {
                       <h3 className="font-semibold text-foreground mb-1">Phone</h3>
                       <p className="text-muted-foreground">+91 9417151386</p>
                       <p className="text-muted-foreground">+91 9216151386</p>
+                      <p className="text-muted-foreground">+91 9877527379</p>
                     </div>
                   </a>
 
@@ -451,39 +470,40 @@ const Index = () => {
                     </div>
                   </a>
 
-                  <a 
-                    href="https://share.google/dZ1hK8yXB3GsLwbQ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-4 p-4 bg-red-50 rounded-lg hover:bg-red-100 transition-colors duration-200 cursor-pointer group"
-                  >
-                    <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Address</h3>
-                      <p className="text-muted-foreground">
-                        Shop Number 57, 58, 59, 60<br />
-                        Sector-14, Panchkula<br />
-                        Haryana, India
-                      </p>
+                  <div className="flex items-start gap-4 p-4 bg-red-50 rounded-lg">
+                    <MapPin className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+                    <div className="w-full">
+                      <h3 className="font-semibold text-foreground mb-3">Our Locations</h3>
+                      <div className="space-y-4">
+                        <a
+                          href="https://share.google/dZ1hK8yXB3GsLwbQ"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-3 bg-white rounded-md hover:bg-red-50 transition-colors cursor-pointer group"
+                        >
+                          <p className="text-muted-foreground group-hover:text-foreground transition-colors">
+                            <strong>Main Showroom:</strong><br />
+                            Shop Number 57, 58, 59, 60<br />
+                            Sector-14, Panchkula<br />
+                            Haryana, India
+                          </p>
+                        </a>
+                        <a
+                          href="https://maps.google.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-3 bg-white rounded-md hover:bg-red-50 transition-colors cursor-pointer group"
+                        >
+                          <p className="text-muted-foreground group-hover:text-foreground transition-colors">
+                            <strong>Second Location:</strong><br />
+                            Sco. 28, Sector - 5<br />
+                            MDC, Panchkula<br />
+                            Haryana, India
+                          </p>
+                        </a>
+                      </div>
                     </div>
-                  </a>
-
-                  <a 
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-4 p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors duration-200 cursor-pointer group"
-                  >
-                    <MapPin className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Second Location</h3>
-                      <p className="text-muted-foreground">
-                        Sco. 28, Sector - 5<br />
-                        MDC, Panchkula<br />
-                        Haryana, India
-                      </p>
-                    </div>
-                  </a>
+                  </div>
 
                   <div className="flex items-start gap-4">
                     <Clock className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
@@ -617,7 +637,7 @@ const Index = () => {
                 What are your store timings?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground font-sans">
-                Both our showrooms in Sector 14 and Sector 5, Panchkula are open all days from 10:30 AM to 8:45 PM. We're here to serve you every day of the week. For any urgent inquiries, you can also reach us at +91 9417151386 or +91 9216151386.
+                Both our showrooms in Sector 14 and Sector 5, Panchkula are open all days from 10:30 AM to 8:45 PM. We're here to serve you every day of the week. For any urgent inquiries, you can also reach us at +91 9417151386, +91 9216151386, or +91 9877527379.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -850,19 +870,26 @@ const Index = () => {
             <div>
               <h4 className="font-semibold text-white mb-4">Contact Info</h4>
               <div className="space-y-3">
-                <a 
+                <a
                   href="tel:+919417151386"
                   className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
                 >
                   <Phone className="w-4 h-4" />
                   <span className="text-sm">+91 9417151386</span>
                 </a>
-                <a 
+                <a
                   href="tel:+919216151386"
                   className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
                 >
                   <Phone className="w-4 h-4" />
                   <span className="text-sm">+91 9216151386</span>
+                </a>
+                <a
+                  href="tel:+919877527379"
+                  className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm">+91 9877527379</span>
                 </a>
                 <a 
                   href="mailto:kishore_foam@rediffmail.com"
