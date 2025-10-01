@@ -17,7 +17,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 pb-4">
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 pb-4" aria-label="Home">
         <div 
           className="absolute inset-0 opacity-90"
           style={{ background: 'var(--hero-gradient)' }}
@@ -71,39 +71,44 @@ const Index = () => {
             <div className="relative flex flex-col items-center">
               {/* Product images */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-8 md:mb-16">
-                <img 
-                  src={mattressHero} 
-                  alt="Premium Mattresses" 
+                <img
+                  src={mattressHero}
+                  alt="Premium Sleepwell mattresses available at Kishore Foam Agencies in Panchkula - memory foam and orthopedic options"
                   className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-48 md:h-56 lg:h-72 object-cover"
                   style={{ animationDelay: '0.3s' }}
+                  loading="eager"
                 />
-                <img 
-                  src={sofaHero} 
-                  alt="Sofa Materials" 
+                <img
+                  src={sofaHero}
+                  alt="High-quality sofa materials and foam for custom furniture making at Kishore Foam Agencies"
                   className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-48 md:h-56 lg:h-72 object-cover"
                   style={{ animationDelay: '0.5s' }}
+                  loading="eager"
                 />
               </div>
               
               {/* Action buttons - positioned below images on mobile */}
               <div className="flex justify-center gap-3 sm:gap-4 mb-6 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-                <a 
-                  href="tel:+919417151386" 
+                <a
+                  href="tel:+919417151386"
                   className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  aria-label="Call Kishore Foam Agencies at +91 9417151386"
                 >
                   <Phone className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
-                <a 
-                  href="mailto:kishore_foam@rediffmail.com" 
+                <a
+                  href="mailto:kishore_foam@rediffmail.com"
                   className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  aria-label="Email Kishore Foam Agencies"
                 >
                   <Mail className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
-                <a 
-                  href="https://share.google/76zlAwYTmDzjjviDr" 
-                  target="_blank" 
+                <a
+                  href="https://share.google/76zlAwYTmDzjjviDr"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 sm:w-16 sm:h-16 bg-primary backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary/80 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  aria-label="View Kishore Foam Agencies location on Google Maps"
                 >
                   <MapPin className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
@@ -139,7 +144,7 @@ const Index = () => {
       <div className="h-16 md:h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
 
       {/* About Us Section */}
-      <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
+      <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="About Us">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">About Us</h2>
@@ -186,7 +191,7 @@ const Index = () => {
       <div className="h-32 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent"></div>
 
       {/* Products Section */}
-      <section id="products" className="py-20 px-4 bg-background">
+      <section id="products" className="py-20 px-4 bg-background" aria-label="Our Products">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Our Products</h2>
@@ -317,7 +322,7 @@ const Index = () => {
       <div className="h-24 bg-gradient-to-b from-transparent via-primary/5 to-primary/10"></div>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
+      <section id="services" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="Our Services">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Services</h2>
@@ -370,7 +375,7 @@ const Index = () => {
       <div className="h-24 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent"></div>
 
       {/* Brands Section */}
-      <section id="brands" className="py-20 px-4 bg-background">
+      <section id="brands" className="py-20 px-4 bg-background" aria-label="Trusted Brands">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Trusted Brands</h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -402,7 +407,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
+      <section id="contact" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="Contact Us">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Contact Us</h2>
