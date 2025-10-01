@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleCheck as CheckCircle, ArrowRight, Sparkles, ExternalLink, Award } from "lucide-react";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
@@ -533,7 +534,96 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact to Footer Gradient Transition */}
+      {/* Contact to FAQ Gradient Transition */}
+      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 px-4 bg-background" aria-label="Frequently Asked Questions">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Frequently Asked Questions</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
+              Find answers to common questions about our products and services
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary font-sans">
+                What types of mattresses do you offer?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-sans">
+                We offer a comprehensive range of mattresses including memory foam mattresses, spring mattresses, and orthopedic mattresses. Each type is available in various sizes (single, double, queen, king) and firmness levels to suit different comfort preferences and sleeping positions.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary font-sans">
+                Do you provide custom sofa making services?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-sans">
+                Yes, we specialize in custom sofa making. We provide high-density foam, upholstery fabrics, springs, and hardware. Our experienced team can help you create custom sofas tailored to your specific requirements and space.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary font-sans">
+                What are your dry cleaning services?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-sans">
+                We offer professional dry cleaning services for sofas, curtains, and upholstery. Our cleaning process uses safe, effective methods that preserve the quality of your fabrics while removing stains and odors. We also provide pickup and delivery services for your convenience.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary font-sans">
+                What is your warranty policy on mattresses?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-sans">
+                Our mattresses come with manufacturer warranties that vary by brand and model. Most of our premium mattresses include warranties ranging from 5 to 10 years. The warranty covers manufacturing defects and structural issues. Please ask our staff for specific warranty details on your chosen mattress.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary font-sans">
+                Do you offer delivery and installation services?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-sans">
+                Yes, we provide delivery services across Panchkula and surrounding areas. Our team will deliver your mattress, furniture, or other products directly to your home. Installation and setup services are also available for items like mattresses and custom sofas to ensure proper placement and optimal comfort.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary font-sans">
+                What payment methods do you accept?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-sans">
+                We accept multiple payment methods including cash, credit/debit cards, UPI payments, and bank transfers. For larger purchases, we may also offer installment payment options. Please contact us for more details on payment plans.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7" className="border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary font-sans">
+                How can I choose the right mattress for me?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-sans">
+                Choosing the right mattress depends on several factors including your sleeping position, body weight, comfort preference (firm vs soft), and any specific health considerations like back pain. Our knowledgeable staff at our Sector 14 or Sector 5 showrooms can help you test different options and find the perfect mattress for your needs.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-8" className="border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary font-sans">
+                What are your store timings?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground font-sans">
+                Both our showrooms in Sector 14 and Sector 5, Panchkula are open all days from 10:30 AM to 8:45 PM. We're here to serve you every day of the week. For any urgent inquiries, you can also reach us at +91 9417151386 or +91 9216151386.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      {/* FAQ to Footer Gradient Transition */}
       <div className="h-32 bg-gradient-to-b from-transparent via-primary/10 to-gray-900/50"></div>
 
       {/* Footer */}
