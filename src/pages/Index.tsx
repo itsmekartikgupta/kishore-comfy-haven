@@ -17,12 +17,12 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen md:min-h-[120vh] flex items-center justify-center px-4 overflow-hidden pt-24 pb-32 md:pb-16">
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 pb-4">
         <div 
           className="absolute inset-0 opacity-90"
           style={{ background: 'var(--hero-gradient)' }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left side - Text content */}
             <div className="text-white space-y-8 animate-fade-in text-center lg:text-left font-sans">
@@ -68,7 +68,8 @@ const Index = () => {
             </div>
             
             {/* Right side - Product images */}
-            <div className="relative mt-8 md:-mt-16 lg:-mt-32 pb-24 md:pb-0">
+            <div className="relative flex flex-col items-center">
+              {/* Product images */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-8 md:mb-16">
                 <img 
                   src={mattressHero} 
@@ -84,8 +85,8 @@ const Index = () => {
                 />
               </div>
               
-              {/* Action buttons */}
-              <div className="md:absolute bottom-16 md:-bottom-8 left-0 right-0 mx-auto w-full md:w-fit flex justify-center gap-3 sm:gap-4 px-4 mt-2 animate-fade-in z-10" style={{ animationDelay: '0.9s' }}>
+              {/* Action buttons - positioned below images on mobile */}
+              <div className="flex justify-center gap-3 sm:gap-4 mb-6 animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <a 
                   href="tel:+919417151386" 
                   className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
@@ -108,12 +109,12 @@ const Index = () => {
                 </a>
               </div>
               
-              {/* Floating rating card - positioned below action buttons */}
+              {/* Rating card - positioned below action buttons */}
               <a 
                 href="https://share.google/76zlAwYTmDzjjviDr" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="absolute -bottom-20 md:-bottom-32 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer group"
+                className="bg-white rounded-lg shadow-xl p-4 animate-scale-in hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer group"
                 style={{ animationDelay: '0.7s' }}
               >
                 <div className="flex items-center gap-3">
@@ -135,7 +136,7 @@ const Index = () => {
       </section>
 
       {/* Hero to About Gradient Transition */}
-      <div className="h-8 md:h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
+      <div className="h-16 md:h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
 
       {/* About Us Section */}
       <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }}>
