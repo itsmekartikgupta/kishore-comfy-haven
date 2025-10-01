@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleCheck as CheckCircle, ArrowRight, Sparkles, ExternalLink, Award } from "lucide-react";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
@@ -623,7 +624,210 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ to Footer Gradient Transition */}
+      {/* FAQ to Testimonials Gradient Transition */}
+      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+
+      {/* Customer Testimonials Section */}
+      <section id="testimonials" className="py-20 px-4 bg-background" aria-label="Customer Testimonials">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">What Our Customers Say</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans mb-6">
+              Real experiences from our valued customers in Panchkula
+            </p>
+            <a 
+              href="https://g.co/kgs/your-business-link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
+            >
+              View all reviews on Google <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-4">
+              {/* Testimonial 1 - Vinay Kumar */}
+              <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <CardTitle className="text-lg font-semibold">Vinay Kumar</CardTitle>
+                        <p className="text-sm text-muted-foreground">3 days ago</p>
+                      </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans">
+                      Had a great experience. Nice staff and very good behaviour of the owner. Very Good explanation of the product by the Staff.
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+
+              {/* Testimonial 2 - Ravi Verma */}
+              <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <CardTitle className="text-lg font-semibold">Ravi Verma</CardTitle>
+                        <p className="text-sm text-muted-foreground">2 weeks ago</p>
+                      </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans">
+                      Good services provided in panchkula. Staff is co-operative and guide you well as per your customize requirements.
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+
+              {/* Testimonial 3 - Piyush Nagpal */}
+              <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <CardTitle className="text-lg font-semibold">Piyush Nagpal</CardTitle>
+                        <p className="text-sm text-muted-foreground">1 month ago</p>
+                      </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans">
+                      Very helpful people and wide collection of furnishing material. We got our sofa renovated with their help and Sleepwell mattresses for home.
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+
+              {/* Testimonial 4 - Avik Seth */}
+              <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <CardTitle className="text-lg font-semibold">Avik Seth</CardTitle>
+                        <p className="text-sm text-muted-foreground">4 months ago</p>
+                      </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans">
+                      Nice and cooperative staff (Mr. Balram). This is second generation of my family buying a mattress from this very shop. The owner is a genuine and humble individual.
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+
+              {/* Testimonial 5 - Rohit Kumar */}
+              <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <CardTitle className="text-lg font-semibold">Rohit Kumar</CardTitle>
+                        <p className="text-sm text-muted-foreground">4 months ago</p>
+                      </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans">
+                      Its a great place to visit since people here are so nice and welcoming. Prices are reasonable too. Must visit if you'd like to add comfort to your life.
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+
+              {/* Testimonial 6 - Maneesh Kumar */}
+              <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <CardTitle className="text-lg font-semibold">Maneesh Kumar</CardTitle>
+                        <p className="text-sm text-muted-foreground">5 months ago</p>
+                      </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans">
+                      Excellent. Rajiv Gupta is a friendly and engaging gentleman. He helped us decide & accommodated our requests etc. I am a repeat client. I wish him success and good health. - Maneesh
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+
+              {/* Testimonial 7 - Ishita Mehra */}
+              <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <CardTitle className="text-lg font-semibold">Ishita Mehra</CardTitle>
+                        <p className="text-sm text-muted-foreground">7 months ago</p>
+                      </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground font-sans">
+                      The experience at Sleepwell was excellent as the staff was very polite and helpful, guiding through various options with patience and ensuring a smooth selection process. They explained the features of different mattresses in detail, helping to choose the right one based on comfort and support preferences.
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="left-0 -translate-x-12" />
+            <CarouselNext className="right-0 translate-x-12" />
+          </Carousel>
+        </div>
+      </section>
+
+      {/* Testimonials to Footer Gradient Transition */}
       <div className="h-32 bg-gradient-to-b from-transparent via-primary/10 to-gray-900/50"></div>
 
       {/* Footer */}
