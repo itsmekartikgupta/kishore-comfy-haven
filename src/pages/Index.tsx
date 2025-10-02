@@ -198,8 +198,12 @@ const Index = () => {
       </section>
 
       {/* Key Metrics Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-gray-950 via-gray-900/90 to-gray-900" aria-label="Impact metrics">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_65%)]" />
+      <section
+        className="relative py-20 px-4"
+        style={{ background: 'var(--gradient-subtle)' }}
+        aria-label="Impact metrics"
+      >
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(50,74,103,0.08),transparent_75%)]" />
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs uppercase tracking-[0.35em] text-primary/70 mb-4 font-semibold">
