@@ -49,7 +49,7 @@ const Index = () => {
                 High-Quality Mattresses and Tailored Foam Solutions for Every Space
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 animate-fade-in max-w-md sm:max-w-none mx-auto sm:mx-0" style={{ animationDelay: '1.1s' }}>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center lg:justify-start animate-fade-in max-w-md sm:max-w-none mx-auto lg:mx-0" style={{ animationDelay: '1.1s' }}>
                 <Button 
                   size="lg" 
                   className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold font-sans border-b-4 border-primary whitespace-nowrap"
