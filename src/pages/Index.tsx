@@ -13,8 +13,32 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const metrics = [
+    {
+      id: "customers",
+      value: 20000,
+      icon: Users,
+      label: "Customers served",
+      description: "Supporting homes with tailored comfort solutions",
+    },
+    {
+      id: "experience",
+      value: 25,
+      icon: Sparkles,
+      label: "Years of expertise",
+      description: "Crafting personalised foam and furnishing experiences",
+    },
+    {
+      id: "products",
+      value: 200,
+      icon: TrendingUp,
+      label: "Products available",
+      description: "Comprehensive range covering every room and requirement",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
