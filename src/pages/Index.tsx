@@ -239,7 +239,7 @@ const Index = () => {
       </section>
 
       {/* Hero to About Gradient Transition */}
-      <div className="h-16 md:h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
+      <div className="h-16 md:h-32 bg-gradient-to-b from-white/10 via-white/5 to-transparent"></div>
 
       {/* About Us Section */}
       <section id="about" className="py-20 px-4 animate-fade-in" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="About Us">
@@ -286,7 +286,7 @@ const Index = () => {
       </section>
 
       {/* Gradient Transition */}
-      <div className="h-32 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent"></div>
+      <div className="h-32 bg-gradient-to-b from-transparent via-white/5 to-white/10"></div>
 
       {/* Products Section */}
       <section id="products" className="py-20 px-4 bg-background" aria-label="Our Products">
@@ -417,7 +417,7 @@ const Index = () => {
       </section>
 
       {/* Gradient Transition */}
-      <div className="h-24 bg-gradient-to-b from-transparent via-primary/5 to-primary/10"></div>
+      <div className="h-24 bg-gradient-to-b from-transparent via-white/5 to-white/10"></div>
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="Our Services">
