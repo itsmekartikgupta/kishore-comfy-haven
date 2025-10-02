@@ -13,7 +13,7 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const metrics = [
