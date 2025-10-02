@@ -49,12 +49,12 @@ const Index = () => {
       
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 pb-4" aria-label="Home">
-        <div 
+        <div
           className="absolute inset-0 opacity-90 animate-fade-in"
           style={{ background: 'var(--hero-gradient)' }}
         >
-          <div className="absolute inset-0 opacity-20" style={{ 
-            background: 'radial-gradient(circle at 30% 50%, hsl(210 60% 40% / 0.3), transparent 50%)'
+          <div className="absolute inset-0 opacity-30" style={{
+            background: 'radial-gradient(circle at 30% 50%, hsla(220, 18%, 88%, 0.14), transparent 55%)'
           }} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto w-full">
