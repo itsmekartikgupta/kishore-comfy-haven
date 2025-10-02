@@ -20,6 +20,7 @@ const Index = () => {
     {
       id: "customers",
       value: 20000,
+      suffix: "+",
       icon: Users,
       label: "Customers served",
       description: "Supporting homes with tailored comfort solutions",
@@ -27,6 +28,7 @@ const Index = () => {
     {
       id: "experience",
       value: 25,
+      suffix: "+",
       icon: Sparkles,
       label: "Years of expertise",
       description: "Crafting personalised foam and furnishing experiences",
@@ -34,6 +36,7 @@ const Index = () => {
     {
       id: "products",
       value: 200,
+      suffix: "+",
       icon: TrendingUp,
       label: "Products available",
       description: "Comprehensive range covering every room and requirement",
