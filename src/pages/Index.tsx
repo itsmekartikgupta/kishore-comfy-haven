@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleCheck as CheckCircle, ArrowRight, Sparkles, ExternalLink, Award } from "lucide-react";
+import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleCheck as CheckCircle, ArrowRight, Sparkles, ExternalLink, Award, Facebook } from "lucide-react";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
 
@@ -79,6 +79,8 @@ const Index = () => {
                   className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-48 md:h-56 lg:h-72 object-cover"
                   style={{ animationDelay: '0.3s' }}
                   loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
                 <img
                   src={sofaHero}
@@ -86,6 +88,8 @@ const Index = () => {
                   className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-fade-in w-full h-48 md:h-56 lg:h-72 object-cover"
                   style={{ animationDelay: '0.5s' }}
                   loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </div>
               
@@ -97,6 +101,15 @@ const Index = () => {
                   aria-label="Call Kishore Foam Agencies at +91 9417151386"
                 >
                   <Phone className="w-5 h-5 sm:w-7 sm:h-7" />
+                </a>
+                <a
+                  href="https://www.facebook.com/kishorefoam"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  aria-label="Visit Kishore Foam Agencies on Facebook"
+                >
+                  <Facebook className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
                 <a
                   href="mailto:kishore_foam@rediffmail.com"
@@ -859,11 +872,20 @@ const Index = () => {
               <p className="mb-4 leading-relaxed text-white/80">
                 Your trusted partner for premium foam products and services. Quality, comfort, and customer satisfaction are our top priorities.
               </p>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-white/80" />
                   <span className="text-sm text-white/80">Open All Days: 10:30 AM - 8:45 PM</span>
                 </div>
+                <a
+                  href="https://www.facebook.com/kishorefoam"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  <Facebook className="w-4 h-4" />
+                  <span className="text-sm">Follow us on Facebook</span>
+                </a>
               </div>
             </div>
             
