@@ -488,7 +488,7 @@ const Index = () => {
       </section>
 
       {/* Gradient Transition */}
-      <div className="h-24 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent"></div>
+      <div className="h-24 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* Brands Section */}
       <section id="brands" className="py-20 px-4 bg-background" aria-label="Trusted Brands">
@@ -678,7 +678,7 @@ const Index = () => {
       </section>
 
       {/* Contact to FAQ Gradient Transition */}
-      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 px-4 bg-background" aria-label="Frequently Asked Questions">
@@ -767,7 +767,7 @@ const Index = () => {
       </section>
 
       {/* FAQ to Testimonials Gradient Transition */}
-      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* Customer Testimonials Section */}
       <section id="testimonials" className="py-20 px-4 bg-background" aria-labelledby="testimonials-heading">
@@ -975,7 +975,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials to Footer Gradient Transition */}
-      <div className="h-32 bg-gradient-to-b from-transparent via-primary/10 to-gray-900/50"></div>
+      <div className="h-32 bg-gradient-to-b from-transparent via-white/10 to-transparent"></div>
 
       {/* Footer */}
       <footer className="py-16 px-4" style={{ background: 'var(--hero-gradient)' }}>
