@@ -8,6 +8,7 @@ import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleChec
 import Autoplay from "embla-carousel-autoplay";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
