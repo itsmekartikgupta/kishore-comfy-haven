@@ -37,9 +37,10 @@ All colors MUST be HSL.
     --ring: 210 40% 35%;
 
     /* Blue-grey gradients and special colors */
-    --hero-gradient: linear-gradient(135deg, hsl(210 40% 25%), hsl(215 28% 17%));
+    --hero-gradient: linear-gradient(135deg, hsl(210 45% 28%) 0%, hsl(215 35% 20%) 50%, hsl(220 40% 15%) 100%);
     --section-bg: 215 16% 98%;
     --card-hover: 210 40% 95%;
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 25% 97%) 100%);
 
     --radius: 0.5rem;
 
@@ -90,9 +91,10 @@ All colors MUST be HSL.
     --ring: 210 40% 55%;
 
     /* Dark mode blue-grey gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(210 40% 15%), hsl(215 28% 7%));
+    --hero-gradient: linear-gradient(135deg, hsl(210 45% 18%) 0%, hsl(215 35% 12%) 50%, hsl(220 40% 8%) 100%);
     --section-bg: 215 28% 5%;
     --card-hover: 215 16% 15%;
+    --gradient-subtle: linear-gradient(180deg, hsl(215 28% 7%) 0%, hsl(220 30% 5%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -188,6 +190,24 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
   .animate-fade-in {
     animation: fade-in 0.6s ease-out;
   }
@@ -206,6 +226,10 @@ All colors MUST be HSL.
   
   .animate-bounce-subtle {
     animation: bounce-subtle 4s infinite;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
   
   /* Enhanced shadow utilities */

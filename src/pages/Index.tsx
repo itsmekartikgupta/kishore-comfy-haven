@@ -4,7 +4,8 @@ import { ContactForm } from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleCheck as CheckCircle, ArrowRight, Sparkles, ExternalLink, Award, Facebook, MessageCircle } from "lucide-react";
+import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleCheck as CheckCircle, ArrowRight, Sparkles, ExternalLink, Award, Facebook, MessageCircle, Users, TrendingUp } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
 
@@ -21,9 +22,13 @@ const Index = () => {
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 pb-4" aria-label="Home">
         <div 
-          className="absolute inset-0 opacity-90"
+          className="absolute inset-0 opacity-90 animate-fade-in"
           style={{ background: 'var(--hero-gradient)' }}
-        />
+        >
+          <div className="absolute inset-0 opacity-20" style={{ 
+            background: 'radial-gradient(circle at 30% 50%, hsl(210 60% 40% / 0.3), transparent 50%)'
+          }} />
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left side - Text content */}
@@ -168,43 +173,43 @@ const Index = () => {
       <div className="h-16 md:h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
 
       {/* About Us Section */}
-      <section id="about" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="About Us">
+      <section id="about" className="py-20 px-4 animate-fade-in" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="About Us">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">About Us</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-sans">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans animate-slide-up">About Us</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-sans animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Established with a commitment to quality and customer satisfaction, Kishore Foam Agencies has been serving the community with premium home comfort solutions.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale">
+            <Card className="text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in hover-scale group" style={{ animationDelay: '0.3s' }}>
               <CardHeader>
-                <Bed className="w-12 h-12 mx-auto text-primary mb-4" />
-                <CardTitle className="text-xl font-sans">Quality Products</CardTitle>
+                <Bed className="w-12 h-12 mx-auto text-primary mb-4 animate-float group-hover:scale-110 transition-transform duration-300" />
+                <CardTitle className="text-xl font-sans group-hover:text-primary transition-colors duration-300">Quality Products</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground font-sans">We source only the finest materials and work with trusted brands to ensure lasting comfort and durability.</p>
+                <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">We source only the finest materials and work with trusted brands to ensure lasting comfort and durability.</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale" style={{ animationDelay: '0.1s' }}>
+            <Card className="text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in hover-scale group" style={{ animationDelay: '0.4s' }}>
               <CardHeader>
-                <CheckCircle className="w-12 h-12 mx-auto text-primary mb-4" />
-                <CardTitle className="text-xl font-sans">Expert Service</CardTitle>
+                <CheckCircle className="w-12 h-12 mx-auto text-primary mb-4 animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: '0.2s' }} />
+                <CardTitle className="text-xl font-sans group-hover:text-primary transition-colors duration-300">Expert Service</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground font-sans">Our experienced team provides professional sofa making and dry cleaning services with attention to detail.</p>
+                <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">Our experienced team provides professional sofa making and dry cleaning services with attention to detail.</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in hover-scale" style={{ animationDelay: '0.2s' }}>
+            <Card className="text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in hover-scale group" style={{ animationDelay: '0.5s' }}>
               <CardHeader>
-                <Phone className="w-12 h-12 mx-auto text-primary mb-4" />
-                <CardTitle className="text-xl font-sans">Customer Care</CardTitle>
+                <Phone className="w-12 h-12 mx-auto text-primary mb-4 animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: '0.4s' }} />
+                <CardTitle className="text-xl font-sans group-hover:text-primary transition-colors duration-300">Customer Care</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground font-sans">We believe in building lasting relationships through exceptional customer service and support.</p>
+                <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">We believe in building lasting relationships through exceptional customer service and support.</p>
               </CardContent>
             </Card>
           </div>
@@ -718,27 +723,32 @@ const Index = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: false,
+              }),
+            ]}
             className="w-full max-w-6xl mx-auto"
           >
             <CarouselContent className="-ml-4">
-              {/* Testimonial 1 - Vinay Kumar */}
-              <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+            <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="h-full bg-card border-border hover:shadow-xl transition-all duration-500 transform hover:scale-105 group">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <CardTitle className="text-lg font-semibold">Vinay Kumar</CardTitle>
+                        <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">Vinay Kumar</CardTitle>
                         <p className="text-sm text-muted-foreground">3 days ago</p>
                       </div>
                       <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                         ))}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-sans">
+                    <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">
                       Had a great experience. Nice staff and very good behaviour of the owner. Very Good explanation of the product by the Staff.
                     </p>
                   </CardContent>
@@ -747,22 +757,22 @@ const Index = () => {
 
               {/* Testimonial 2 - Ravi Verma */}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                <Card className="h-full bg-card border-border hover:shadow-xl transition-all duration-500 transform hover:scale-105 group">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <CardTitle className="text-lg font-semibold">Ravi Verma</CardTitle>
+                        <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">Ravi Verma</CardTitle>
                         <p className="text-sm text-muted-foreground">2 weeks ago</p>
                       </div>
                       <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                         ))}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-sans">
+                    <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">
                       Good services provided in panchkula. Staff is co-operative and guide you well as per your customize requirements.
                     </p>
                   </CardContent>
@@ -771,22 +781,22 @@ const Index = () => {
 
               {/* Testimonial 3 - Piyush Nagpal */}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                <Card className="h-full bg-card border-border hover:shadow-xl transition-all duration-500 transform hover:scale-105 group">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <CardTitle className="text-lg font-semibold">Piyush Nagpal</CardTitle>
+                        <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">Piyush Nagpal</CardTitle>
                         <p className="text-sm text-muted-foreground">1 month ago</p>
                       </div>
                       <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                         ))}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-sans">
+                    <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">
                       Very helpful people and wide collection of furnishing material. We got our sofa renovated with their help and Sleepwell mattresses for home.
                     </p>
                   </CardContent>
@@ -795,22 +805,22 @@ const Index = () => {
 
               {/* Testimonial 4 - Avik Seth */}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                <Card className="h-full bg-card border-border hover:shadow-xl transition-all duration-500 transform hover:scale-105 group">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <CardTitle className="text-lg font-semibold">Avik Seth</CardTitle>
+                        <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">Avik Seth</CardTitle>
                         <p className="text-sm text-muted-foreground">4 months ago</p>
                       </div>
                       <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                         ))}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-sans">
+                    <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">
                       Nice and cooperative staff (Mr. Balram). This is second generation of my family buying a mattress from this very shop. The owner is a genuine and humble individual.
                     </p>
                   </CardContent>
@@ -819,22 +829,22 @@ const Index = () => {
 
               {/* Testimonial 5 - Rohit Kumar */}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                <Card className="h-full bg-card border-border hover:shadow-xl transition-all duration-500 transform hover:scale-105 group">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <CardTitle className="text-lg font-semibold">Rohit Kumar</CardTitle>
+                        <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">Rohit Kumar</CardTitle>
                         <p className="text-sm text-muted-foreground">4 months ago</p>
                       </div>
                       <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                         ))}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-sans">
+                    <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">
                       Its a great place to visit since people here are so nice and welcoming. Prices are reasonable too. Must visit if you'd like to add comfort to your life.
                     </p>
                   </CardContent>
@@ -843,22 +853,22 @@ const Index = () => {
 
               {/* Testimonial 6 - Maneesh Kumar */}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                <Card className="h-full bg-card border-border hover:shadow-xl transition-all duration-500 transform hover:scale-105 group">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <CardTitle className="text-lg font-semibold">Maneesh Kumar</CardTitle>
+                        <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">Maneesh Kumar</CardTitle>
                         <p className="text-sm text-muted-foreground">5 months ago</p>
                       </div>
                       <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                         ))}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-sans">
+                    <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">
                       Excellent. Rajiv Gupta is a friendly and engaging gentleman. He helped us decide & accommodated our requests etc. I am a repeat client. I wish him success and good health. - Maneesh
                     </p>
                   </CardContent>
@@ -867,22 +877,22 @@ const Index = () => {
 
               {/* Testimonial 7 - Ishita Mehra */}
               <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow">
+                <Card className="h-full bg-card border-border hover:shadow-xl transition-all duration-500 transform hover:scale-105 group">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
-                        <CardTitle className="text-lg font-semibold">Ishita Mehra</CardTitle>
+                        <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">Ishita Mehra</CardTitle>
                         <p className="text-sm text-muted-foreground">7 months ago</p>
                       </div>
                       <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400 animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                         ))}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-sans">
+                    <p className="text-muted-foreground font-sans group-hover:text-foreground transition-colors duration-300">
                       The experience at Sleepwell was excellent as the staff was very polite and helpful, guiding through various options with patience and ensuring a smooth selection process. They explained the features of different mattresses in detail, helping to choose the right one based on comfort and support preferences.
                     </p>
                   </CardContent>
@@ -959,9 +969,9 @@ const Index = () => {
                 </a>
                 <a 
                   href="mailto:kishore_foam@rediffmail.com"
-                  className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                  className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer group"
                 >
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-sm">kishore_foam@rediffmail.com</span>
                 </a>
               </div>
