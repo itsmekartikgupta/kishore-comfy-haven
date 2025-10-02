@@ -197,6 +197,47 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Key Metrics Section */}
+      <section className="relative py-20 px-4 bg-gradient-to-b from-gray-950 via-gray-900/90 to-gray-900" aria-label="Impact metrics">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_65%)]" />
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.35em] text-primary/70 mb-4 font-semibold">
+              Proven legacy
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold text-white font-sans">
+              Trusted comfort for thousands of happy homes
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {metrics.map(({ id, value, suffix, icon: Icon, label, description }) => (
+              <article
+                key={id}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-8 shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-primary/10 to-primary/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="relative flex flex-col gap-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/25 text-white group-hover:bg-primary/35 transition-colors duration-300">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="text-4xl md:text-5xl font-bold tracking-tight text-white font-sans">
+                      <AnimatedCounter value={value} suffix={suffix} formatOptions={{ maximumFractionDigits: 0 }} />
+                    </p>
+                    <p className="mt-2 text-base md:text-lg text-white/85 font-semibold font-sans">
+                      {label}
+                    </p>
+                    <p className="mt-3 text-sm text-white/70 font-sans leading-relaxed">
+                      {description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Hero to About Gradient Transition */}
       <div className="h-16 md:h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
 
