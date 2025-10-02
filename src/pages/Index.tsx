@@ -203,13 +203,13 @@ const Index = () => {
         style={{ background: 'var(--gradient-subtle)' }}
         aria-label="Impact metrics"
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(50,74,103,0.08),transparent_75%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(91,110,133,0.12),transparent_75%)]" />
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-[0.35em] text-primary/70 mb-4 font-semibold">
+            <p className="text-xs uppercase tracking-[0.35em] text-primary mb-4 font-semibold">
               Proven legacy
             </p>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white font-sans">
+            <h2 className="text-3xl md:text-4xl font-semibold text-foreground font-sans">
               Trusted comfort for thousands of happy homes
             </h2>
           </div>
@@ -217,21 +217,21 @@ const Index = () => {
             {metrics.map(({ id, value, suffix, icon: Icon, label, description }) => (
               <article
                 key={id}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-8 shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+                className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-[hsl(var(--card))] p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-primary/10 to-primary/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-primary/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="relative flex flex-col gap-6">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/25 text-white group-hover:bg-primary/35 transition-colors duration-300">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-300">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="text-4xl md:text-5xl font-bold tracking-tight text-white font-sans">
+                    <p className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-sans">
                       <AnimatedCounter value={value} suffix={suffix} formatOptions={{ maximumFractionDigits: 0 }} />
                     </p>
-                    <p className="mt-2 text-base md:text-lg text-white/80 font-semibold font-sans">
+                    <p className="mt-2 text-base md:text-lg text-foreground font-semibold font-sans">
                       {label}
                     </p>
-                    <p className="mt-3 text-sm text-white/70 font-sans leading-relaxed">
+                    <p className="mt-3 text-sm text-muted-foreground font-sans leading-relaxed">
                       {description}
                     </p>
                   </div>
