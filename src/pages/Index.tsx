@@ -224,7 +224,7 @@ const Index = () => {
                     <p className="text-4xl md:text-5xl font-bold tracking-tight text-white font-sans">
                       <AnimatedCounter value={value} suffix={suffix} formatOptions={{ maximumFractionDigits: 0 }} />
                     </p>
-                    <p className="mt-2 text-base md:text-lg text-white/85 font-semibold font-sans">
+                    <p className="mt-2 text-base md:text-lg text-white/80 font-semibold font-sans">
                       {label}
                     </p>
                     <p className="mt-3 text-sm text-white/70 font-sans leading-relaxed">
