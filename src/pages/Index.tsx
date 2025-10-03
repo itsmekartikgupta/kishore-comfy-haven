@@ -20,6 +20,9 @@ const Index = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const metrics = [
     {
       id: "customers",
@@ -46,6 +49,17 @@ const Index = () => {
       description: "Mattresses, furnishings, and comfort essentials for every lifestyle",
     },
   ];
+
+  useEffect(() => {
+    const state = location.state as { scrollTo?: string } | undefined;
+    if (state?.scrollTo) {
+      const timeout = window.setTimeout(() => {
+        document.getElementById(state.scrollTo)?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+      navigate(location.pathname, { replace: true, state: {} });
+      return () => window.clearTimeout(timeout);
+    }
+  }, [location, navigate]);
 
   return (
     <div className="min-h-screen bg-background">
