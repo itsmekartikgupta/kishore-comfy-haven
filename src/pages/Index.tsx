@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ContactForm } from "@/components/ContactForm";
