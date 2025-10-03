@@ -79,13 +79,16 @@ const Index = () => {
                 <span className="text-white font-light text-sm md:text-base">Oldest Showroom in Chandigarh Tricity</span>
               </div>
               
-              <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/90 max-w-2xl leading-relaxed animate-fade-in font-light font-sans" style={{ animationDelay: '0.9s' }}>
+              <p className="text-lg md:text-xl lg:text-2xl mb-6 text-white/90 max-w-2xl leading-relaxed animate-fade-in font-light font-sans" style={{ animationDelay: '0.9s' }}>
                 High-Quality Mattresses and Tailored Foam Solutions for Every Space
               </p>
-              
+              <p className="text-base md:text-lg text-white/85 uppercase tracking-[0.25em] animate-fade-in font-semibold font-sans" style={{ animationDelay: '1s' }}>
+                Bajaj Finance available
+              </p>
+
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center lg:justify-start animate-fade-in max-w-md sm:max-w-none mx-auto lg:mx-0" style={{ animationDelay: '1.1s' }}>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold font-sans border-b-4 border-primary whitespace-nowrap"
                   onClick={() => scrollToSection('products')}
                 >
@@ -160,6 +163,15 @@ const Index = () => {
                   aria-label="Email Kishore Foam Agencies"
                 >
                   <Mail className="w-5 h-5 sm:w-7 sm:h-7" />
+                </a>
+                <a
+                  href="https://jsdl.in/DT-19JZWMKU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  aria-label="View Kishore Foam Agencies on Justdial"
+                >
+                  <ExternalLink className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
                 <a
                   href="https://share.google/76zlAwYTmDzjjviDr"
@@ -394,7 +406,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4 font-sans">Premium mattress toppers for enhanced comfort and support.</p>
                 <ul className="space-y-2 text-sm text-muted-foreground font-sans">
                   <li>• Memory foam toppers</li>
-                  <li>• Cooling gel toppers</li>
+                  <li>�� Cooling gel toppers</li>
                   <li>• Various thickness options</li>
                 </ul>
               </CardContent>
