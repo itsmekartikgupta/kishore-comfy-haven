@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { ContactForm } from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -16,14 +19,17 @@ const Index = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const metrics = [
     {
       id: "customers",
-      value: 20000,
+      value: 35000,
       suffix: "+",
       icon: Users,
       label: "Customers saved till date",
-      description: "Delivering restful comfort to more than twenty thousand households",
+      description: "Delivering restful comfort to more than thirty five thousand households",
     },
     {
       id: "experience",
@@ -42,6 +48,17 @@ const Index = () => {
       description: "Mattresses, furnishings, and comfort essentials for every lifestyle",
     },
   ];
+
+  useEffect(() => {
+    const state = location.state as { scrollTo?: string } | undefined;
+    if (state?.scrollTo) {
+      const timeout = window.setTimeout(() => {
+        document.getElementById(state.scrollTo)?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+      navigate(location.pathname, { replace: true, state: {} });
+      return () => window.clearTimeout(timeout);
+    }
+  }, [location, navigate]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -81,10 +98,10 @@ const Index = () => {
               <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/90 max-w-2xl leading-relaxed animate-fade-in font-light font-sans" style={{ animationDelay: '0.9s' }}>
                 High-Quality Mattresses and Tailored Foam Solutions for Every Space
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center lg:justify-start animate-fade-in max-w-md sm:max-w-none mx-auto lg:mx-0" style={{ animationDelay: '1.1s' }}>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-white text-primary hover:bg-white/90 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold font-sans border-b-4 border-primary whitespace-nowrap"
                   onClick={() => scrollToSection('products')}
                 >
@@ -159,6 +176,15 @@ const Index = () => {
                   aria-label="Email Kishore Foam Agencies"
                 >
                   <Mail className="w-5 h-5 sm:w-7 sm:h-7" />
+                </a>
+                <a
+                  href="https://jsdl.in/DT-19JZWMKU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
+                  aria-label="View Kishore Foam Agencies on Justdial"
+                >
+                  <ExternalLink className="w-5 h-5 sm:w-7 sm:h-7" />
                 </a>
                 <a
                   href="https://share.google/76zlAwYTmDzjjviDr"
@@ -692,6 +718,11 @@ const Index = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
               Find answers to common questions about our products and services
             </p>
+            <div className="mt-6 flex justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <Badge variant="secondary" className="px-5 py-2.5 text-sm uppercase tracking-[0.18em] font-semibold">
+                Bajaj Finance available
+              </Badge>
+            </div>
           </div>
 
           <Accordion type="single" collapsible className="w-full space-y-4">
@@ -774,8 +805,14 @@ const Index = () => {
       <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* Customer Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4 bg-background" aria-labelledby="testimonials-heading">
-        <div className="max-w-7xl mx-auto">
+      <section
+        id="testimonials"
+        className="relative py-20 px-4"
+        style={{ background: 'var(--gradient-subtle)' }}
+        aria-labelledby="testimonials-heading"
+      >
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(91,110,133,0.1),transparent_70%)]" />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">What Our Customers Say</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans mb-6">
