@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
-import { Bed, CheckCircle, Users, Award, Heart, Clock, Phone, Mail, MapPin } from "lucide-react";
+import { Bed, CircleCheck as CheckCircle, Users, Award, Heart, Clock, Phone, Mail, MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
