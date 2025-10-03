@@ -280,11 +280,6 @@ const Index = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-sans animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Established with a commitment to quality and customer satisfaction, Kishore Foam Agencies has been serving the community with premium home comfort solutions.
             </p>
-            <div className="mt-6 flex justify-center animate-fade-in" style={{ animationDelay: '0.35s' }}>
-              <Badge variant="secondary" className="px-6 py-3 text-sm md:text-base font-semibold tracking-[0.2em] uppercase">
-                Bajaj Finance available
-              </Badge>
-            </div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -724,6 +719,11 @@ const Index = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
               Find answers to common questions about our products and services
             </p>
+            <div className="mt-6 flex justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <Badge variant="secondary" className="px-5 py-2.5 text-sm uppercase tracking-[0.18em] font-semibold">
+                Bajaj Finance available
+              </Badge>
+            </div>
           </div>
 
           <Accordion type="single" collapsible className="w-full space-y-4">
