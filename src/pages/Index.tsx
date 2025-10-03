@@ -21,11 +21,11 @@ const Index = () => {
   const metrics = [
     {
       id: "customers",
-      value: 20000,
+      value: 35000,
       suffix: "+",
       icon: Users,
       label: "Customers saved till date",
-      description: "Delivering restful comfort to more than twenty thousand households",
+      description: "Delivering restful comfort to more than thirty five thousand households",
     },
     {
       id: "experience",
