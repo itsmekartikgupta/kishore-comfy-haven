@@ -79,11 +79,8 @@ const Index = () => {
                 <span className="text-white font-light text-sm md:text-base">Oldest Showroom in Chandigarh Tricity</span>
               </div>
               
-              <p className="text-lg md:text-xl lg:text-2xl mb-6 text-white/90 max-w-2xl leading-relaxed animate-fade-in font-light font-sans" style={{ animationDelay: '0.9s' }}>
+              <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/90 max-w-2xl leading-relaxed animate-fade-in font-light font-sans" style={{ animationDelay: '0.9s' }}>
                 High-Quality Mattresses and Tailored Foam Solutions for Every Space
-              </p>
-              <p className="text-base md:text-lg text-white/85 tracking-[0.12em] animate-fade-in font-semibold font-sans" style={{ animationDelay: '1s' }}>
-                Bajaj Finance available
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center lg:justify-start animate-fade-in max-w-md sm:max-w-none mx-auto lg:mx-0" style={{ animationDelay: '1.1s' }}>
@@ -266,6 +263,11 @@ const Index = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-sans animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Established with a commitment to quality and customer satisfaction, Kishore Foam Agencies has been serving the community with premium home comfort solutions.
             </p>
+            <div className="mt-6 flex justify-center animate-fade-in" style={{ animationDelay: '0.35s' }}>
+              <Badge variant="secondary" className="px-6 py-3 text-sm md:text-base font-semibold tracking-[0.2em] uppercase">
+                Bajaj Finance available
+              </Badge>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
