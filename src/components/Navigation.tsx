@@ -1,24 +1,46 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleSectionNavigation = (sectionId: string) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
+    } else {
+      scrollToSection(sectionId);
+    }
     setIsOpen(false);
   };
 
   const refreshPage = () => {
-    window.location.reload();
+    if (location.pathname !== "/") {
+      navigate("/");
+      setIsOpen(false);
+    } else {
+      window.location.reload();
+    }
   };
+
   const navItems = [
     { label: "Home", id: "home" },
     { label: "About", id: "about" },
     { label: "Products", id: "products" },
     { label: "Services", id: "services" }
+  ];
+
+  const pageLinks = [
+    { label: "Blogs", to: "/blogs" }
   ];
 
   return (
@@ -41,16 +63,27 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleSectionNavigation(item.id)}
                   className="relative text-foreground hover:text-primary px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary/5 backdrop-blur-sm group font-sans"
                 >
                   {item.label}
                   <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </button>
               ))}
-              <Button 
+              {pageLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => setIsOpen(false)}
+                  className="relative text-foreground hover:text-primary px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary/5 backdrop-blur-sm group font-sans"
+                >
+                  {link.label}
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </Link>
+              ))}
+              <Button
                 className="ml-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 animate-pulse hover:animate-none rounded-xl px-6 py-2 font-semibold font-sans"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleSectionNavigation("contact")}
               >
                 Contact
               </Button>
@@ -75,15 +108,25 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleSectionNavigation(item.id)}
                   className="block text-foreground hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-300 backdrop-blur-sm font-sans"
                 >
                   {item.label}
                 </button>
               ))}
-              <Button 
+              {pageLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => setIsOpen(false)}
+                  className="block text-foreground hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-300 backdrop-blur-sm font-sans"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Button
                 className="w-full mt-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white shadow-xl transform hover:scale-105 transition-all duration-300 rounded-xl py-3 font-semibold font-sans"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleSectionNavigation("contact")}
               >
                 Contact
               </Button>
