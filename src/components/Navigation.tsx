@@ -133,6 +133,10 @@ const Navigation = () => {
             </div>
           </div>
         )}
+
+        <div className="py-3">
+          <AppBreadcrumbs />
+        </div>
       </div>
     </nav>
   );
