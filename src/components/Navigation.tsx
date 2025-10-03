@@ -134,7 +134,7 @@ const Navigation = () => {
           </div>
         )}
 
-        <div className="py-3">
+        <div className="py-3 hidden sm:block">
           <AppBreadcrumbs />
         </div>
       </div>
