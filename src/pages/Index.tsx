@@ -9,6 +9,7 @@ import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleChec
 import Autoplay from "embla-carousel-autoplay";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -16,18 +17,45 @@ const Index = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const metrics = [
+    {
+      id: "customers",
+      value: 20000,
+      suffix: "+",
+      icon: Users,
+      label: "Customers saved till date",
+      description: "Delivering restful comfort to more than twenty thousand households",
+    },
+    {
+      id: "experience",
+      value: 25,
+      suffix: "+",
+      icon: Sparkles,
+      label: "Years of experience",
+      description: "Serving the region since 1999 with expert craftsmanship and care",
+    },
+    {
+      id: "products",
+      value: 200,
+      suffix: "+",
+      icon: TrendingUp,
+      label: "Products in portfolio",
+      description: "Mattresses, furnishings, and comfort essentials for every lifestyle",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden pt-24 pb-4" aria-label="Home">
-        <div 
+        <div
           className="absolute inset-0 opacity-90 animate-fade-in"
           style={{ background: 'var(--hero-gradient)' }}
         >
-          <div className="absolute inset-0 opacity-20" style={{ 
-            background: 'radial-gradient(circle at 30% 50%, hsl(210 60% 40% / 0.3), transparent 50%)'
+          <div className="absolute inset-0 opacity-30" style={{
+            background: 'radial-gradient(circle at 30% 50%, hsla(220, 18%, 88%, 0.14), transparent 55%)'
           }} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto w-full">
@@ -170,8 +198,53 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Key Metrics Section */}
+      <section
+        className="relative py-20 px-4"
+        style={{ background: 'var(--gradient-subtle)' }}
+        aria-label="Impact metrics"
+      >
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(91,110,133,0.12),transparent_75%)]" />
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.35em] text-primary mb-4 font-semibold">
+              Proven legacy
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold text-foreground font-sans">
+              Trusted comfort for thousands of happy homes
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {metrics.map(({ id, value, suffix, icon: Icon, label, description }) => (
+              <article
+                key={id}
+                className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-[hsl(var(--card))] p-8 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-primary/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="relative flex flex-col gap-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-300">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-sans">
+                      <AnimatedCounter value={value} suffix={suffix} formatOptions={{ maximumFractionDigits: 0 }} />
+                    </p>
+                    <p className="mt-2 text-base md:text-lg text-foreground font-semibold font-sans">
+                      {label}
+                    </p>
+                    <p className="mt-3 text-sm text-muted-foreground font-sans leading-relaxed">
+                      {description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Hero to About Gradient Transition */}
-      <div className="h-16 md:h-32 bg-gradient-to-b from-gray-900/50 via-primary/10 to-transparent"></div>
+      <div className="h-16 md:h-32 bg-gradient-to-b from-white/10 via-white/5 to-transparent"></div>
 
       {/* About Us Section */}
       <section id="about" className="py-20 px-4 animate-fade-in" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="About Us">
@@ -218,7 +291,7 @@ const Index = () => {
       </section>
 
       {/* Gradient Transition */}
-      <div className="h-32 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent"></div>
+      <div className="h-32 bg-gradient-to-b from-transparent via-white/5 to-white/10"></div>
 
       {/* Products Section */}
       <section id="products" className="py-20 px-4 bg-background" aria-label="Our Products">
@@ -349,7 +422,7 @@ const Index = () => {
       </section>
 
       {/* Gradient Transition */}
-      <div className="h-24 bg-gradient-to-b from-transparent via-primary/5 to-primary/10"></div>
+      <div className="h-24 bg-gradient-to-b from-transparent via-white/5 to-white/10"></div>
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="Our Services">
@@ -420,7 +493,7 @@ const Index = () => {
       </section>
 
       {/* Gradient Transition */}
-      <div className="h-24 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent"></div>
+      <div className="h-24 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* Brands Section */}
       <section id="brands" className="py-20 px-4 bg-background" aria-label="Trusted Brands">
@@ -610,7 +683,7 @@ const Index = () => {
       </section>
 
       {/* Contact to FAQ Gradient Transition */}
-      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 px-4 bg-background" aria-label="Frequently Asked Questions">
@@ -699,7 +772,7 @@ const Index = () => {
       </section>
 
       {/* FAQ to Testimonials Gradient Transition */}
-      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+      <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* Customer Testimonials Section */}
       <section id="testimonials" className="py-20 px-4 bg-background" aria-labelledby="testimonials-heading">
@@ -907,7 +980,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials to Footer Gradient Transition */}
-      <div className="h-32 bg-gradient-to-b from-transparent via-primary/10 to-gray-900/50"></div>
+      <div className="h-32 bg-gradient-to-b from-transparent via-white/10 to-transparent"></div>
 
       {/* Footer */}
       <footer className="py-16 px-4" style={{ background: 'var(--hero-gradient)' }}>
