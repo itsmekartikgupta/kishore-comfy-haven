@@ -28,6 +28,28 @@ const blogPosts = [
     ],
   },
   {
+    id: "mattress-maintenance-decade",
+    title: "How to Maintain Your Mattress for 10+ Years",
+    date: "January 3, 2025",
+    readTime: "8 min read",
+    category: "Mattress Care",
+    excerpt:
+      "Protect comfort and hygiene with a seasonal maintenance routine that keeps your mattress supportive well beyond the warranty period.",
+    focus:
+      "A blend of protective covers, smart rotation schedules, and professional cleaning extends mattress lifespan without sacrificing comfort.",
+    highlights: [
+      "Rotate or flip compatible mattresses every three months to balance body impressions.",
+      "Shield against spills and dust mites with breathable, waterproof protectors.",
+      "Vacuum and air out the mattress quarterly to maintain freshness and support.",
+    ],
+    content: [
+      "Mattresses naturally develop impressions where you sleep the most. Rotating your mattress from head to toe every quarter distributes weight more evenly and slows down sagging. Two-sided mattresses can also be flipped, giving each surface time to recover.",
+      "Investing in a premium mattress protector is a low-cost way to block moisture, allergens, and accidental spills. Choose breathable fabrics so heat escapes and wash the protector alongside your bedding every few weeks.",
+      "Every season, strip the bed completely and vacuum the mattress surface using an upholstery attachment. Allow it to breathe in a shaded, well-ventilated room and sprinkle a light layer of baking soda before vacuuming again to neutralise odours.",
+      "If you notice uneven support or persistent staining, speak with the Kishore Foam Agencies service desk. Our experts can recommend professional dry cleaning, replacement toppers, or support systems that restore comfort without a full replacement.",
+    ],
+  },
+  {
     id: "sofa-maintenance-guide",
     title: "Foam Sofa Maintenance Guide for Busy Homes",
     date: "December 28, 2024",
