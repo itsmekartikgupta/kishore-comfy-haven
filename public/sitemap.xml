@@ -18,11 +18,27 @@
     </image:image>
   </url>
 
+  <!-- About Page -->
+  <url>
+    <loc>https://www.kishorefoam.com/about</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- About Section -->
   <url>
     <loc>https://www.kishorefoam.com/#about</loc>
     <lastmod>2025-10-03</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs Page -->
+  <url>
+    <loc>https://www.kishorefoam.com/blogs</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
