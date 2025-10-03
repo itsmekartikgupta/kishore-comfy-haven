@@ -806,8 +806,14 @@ const Index = () => {
       <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* Customer Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4 bg-background" aria-labelledby="testimonials-heading">
-        <div className="max-w-7xl mx-auto">
+      <section
+        id="testimonials"
+        className="relative py-20 px-4"
+        style={{ background: 'var(--gradient-subtle)' }}
+        aria-labelledby="testimonials-heading"
+      >
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(91,110,133,0.1),transparent_70%)]" />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">What Our Customers Say</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans mb-6">
