@@ -33,6 +33,7 @@ const Navigation = () => {
   };
 
   const navItems = [
+    { label: "Home", id: "home" },
     { label: "About", id: "about" },
     { label: "Products", id: "products" },
     { label: "Services", id: "services" }
@@ -133,9 +134,6 @@ const Navigation = () => {
           </div>
         )}
 
-        <div className="py-3 hidden sm:block">
-          <AppBreadcrumbs />
-        </div>
       </div>
     </nav>
   );
