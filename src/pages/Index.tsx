@@ -82,7 +82,7 @@ const Index = () => {
               <p className="text-lg md:text-xl lg:text-2xl mb-6 text-white/90 max-w-2xl leading-relaxed animate-fade-in font-light font-sans" style={{ animationDelay: '0.9s' }}>
                 High-Quality Mattresses and Tailored Foam Solutions for Every Space
               </p>
-              <p className="text-base md:text-lg text-white/85 uppercase tracking-[0.25em] animate-fade-in font-semibold font-sans" style={{ animationDelay: '1s' }}>
+              <p className="text-base md:text-lg text-white/85 tracking-[0.12em] animate-fade-in font-semibold font-sans" style={{ animationDelay: '1s' }}>
                 Bajaj Finance available
               </p>
 
@@ -406,7 +406,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4 font-sans">Premium mattress toppers for enhanced comfort and support.</p>
                 <ul className="space-y-2 text-sm text-muted-foreground font-sans">
                   <li>• Memory foam toppers</li>
-                  <li>�� Cooling gel toppers</li>
+                  <li>• Cooling gel toppers</li>
                   <li>• Various thickness options</li>
                 </ul>
               </CardContent>
