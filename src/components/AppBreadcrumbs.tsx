@@ -31,7 +31,7 @@ const AppBreadcrumbs = () => {
   });
 
   return (
-    <Breadcrumb className="hidden sm:block" aria-label="Site breadcrumbs">
+    <Breadcrumb className="text-sm text-muted-foreground/90" aria-label="Site breadcrumbs">
       <BreadcrumbList>
         <BreadcrumbItem>
           {crumbs.length === 0 ? (
