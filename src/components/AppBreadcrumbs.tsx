@@ -43,9 +43,9 @@ const AppBreadcrumbs = () => {
           )}
         </BreadcrumbItem>
         {crumbs.map((crumb, index) => (
-          <>
-            <BreadcrumbSeparator key={`${crumb.href}-separator`} />
-            <BreadcrumbItem key={crumb.href}>
+          <Fragment key={crumb.href}>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
               {index === crumbs.length - 1 ? (
                 <BreadcrumbPage>{crumb.label}</BreadcrumbPage>
               ) : (
@@ -54,7 +54,7 @@ const AppBreadcrumbs = () => {
                 </BreadcrumbLink>
               )}
             </BreadcrumbItem>
-          </>
+          </Fragment>
         ))}
       </BreadcrumbList>
     </Breadcrumb>
