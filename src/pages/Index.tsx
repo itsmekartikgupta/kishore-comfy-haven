@@ -11,6 +11,8 @@ import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleChec
 import Autoplay from "embla-carousel-autoplay";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
+import sleepwellLogo from "@/assets/sleepwell-logo.png";
+import ddecorLogo from "@/assets/ddecor-logo.png";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 const Index = () => {
@@ -318,6 +320,107 @@ const Index = () => {
       {/* Gradient Transition */}
       <div className="h-32 bg-gradient-to-b from-transparent via-white/5 to-white/10"></div>
 
+      {/* Featured Products Carousel */}
+      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/20" aria-label="Featured Products">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Featured Products</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
+              Explore our most popular comfort solutions
+            </p>
+          </div>
+          
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="h-full">
+                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
+                      <Bed className="w-16 h-16 text-primary mb-4" />
+                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Premium Mattresses</h3>
+                      <p className="text-muted-foreground text-center font-sans">Memory foam & orthopedic options for perfect sleep</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+              
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="h-full">
+                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
+                      <Sofa className="w-16 h-16 text-primary mb-4" />
+                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Custom Sofa Making</h3>
+                      <p className="text-muted-foreground text-center font-sans">High-density foam & premium upholstery materials</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+              
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="h-full">
+                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
+                      <Shirt className="w-16 h-16 text-primary mb-4" />
+                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Curtain Cloth</h3>
+                      <p className="text-muted-foreground text-center font-sans">Designer patterns & custom sizing options</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+              
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="h-full">
+                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
+                      <Package className="w-16 h-16 text-primary mb-4" />
+                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Bean Bags</h3>
+                      <p className="text-muted-foreground text-center font-sans">Stylish & comfortable for modern living</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+              
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="h-full">
+                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
+                      <Bed className="w-16 h-16 text-primary mb-4" />
+                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Pillows & Toppers</h3>
+                      <p className="text-muted-foreground text-center font-sans">Enhanced comfort & support solutions</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+              
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="h-full">
+                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
+                      <CheckCircle className="w-16 h-16 text-primary mb-4" />
+                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Mattress Protectors</h3>
+                      <p className="text-muted-foreground text-center font-sans">Waterproof & breathable protection</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
+        </div>
+      </section>
+
       {/* Products Section */}
       <section id="products" className="py-20 px-4 bg-background" aria-label="Our Products">
         <div className="max-w-6xl mx-auto">
@@ -531,21 +634,29 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Bed className="w-12 h-12 text-primary" />
+                <div className="w-full h-32 mx-auto mb-6 flex items-center justify-center">
+                  <img 
+                    src={sleepwellLogo} 
+                    alt="Sleepwell mattress brand logo - India's most trusted mattress manufacturer" 
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">Sleepwell</h3>
-                <p className="text-muted-foreground">India's most trusted mattress brand, offering superior comfort and support for better sleep.</p>
+                <h3 className="text-2xl font-bold text-foreground mb-2 font-sans">Sleepwell</h3>
+                <p className="text-muted-foreground font-sans">India's most trusted mattress brand, offering superior comfort and support for better sleep.</p>
               </div>
             </Card>
 
             <Card className="p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Shirt className="w-12 h-12 text-primary" />
+                <div className="w-full h-32 mx-auto mb-6 flex items-center justify-center">
+                  <img 
+                    src={ddecorLogo} 
+                    alt="D'Decor brand logo - premium home furnishing and curtain fabrics" 
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">D'Decor</h3>
-                <p className="text-muted-foreground">Premium home furnishing brand known for exquisite curtains and upholstery fabrics.</p>
+                <h3 className="text-2xl font-bold text-foreground mb-2 font-sans">D'Decor</h3>
+                <p className="text-muted-foreground font-sans">Premium home furnishing brand known for exquisite curtains and upholstery fabrics.</p>
               </div>
             </Card>
           </div>

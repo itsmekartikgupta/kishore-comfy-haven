@@ -1,6 +1,9 @@
 import Navigation from "@/components/Navigation";
 import AppBreadcrumbs from "@/components/AppBreadcrumbs";
-import { Bed, Sofa, Package } from "lucide-react";
+import { Bed, Sofa, Package, Shirt, CheckCircle } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+import Autoplay from "embla-carousel-autoplay";
 
 const Products = () => {
   const products = [
@@ -89,6 +92,98 @@ const Products = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
               Discover our comprehensive range of home comfort products designed to enhance your living space.
             </p>
+          </div>
+
+          {/* Featured Products Carousel */}
+          <div className="mb-20">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full">
+                      <CardContent className="flex flex-col items-center justify-center p-6 min-h-[280px]">
+                        <Bed className="w-16 h-16 text-primary mb-4" />
+                        <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Premium Mattresses</h3>
+                        <p className="text-muted-foreground text-center font-sans text-sm">Memory foam & orthopedic options for perfect sleep</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full">
+                      <CardContent className="flex flex-col items-center justify-center p-6 min-h-[280px]">
+                        <Sofa className="w-16 h-16 text-primary mb-4" />
+                        <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Sofa Materials</h3>
+                        <p className="text-muted-foreground text-center font-sans text-sm">High-density foam & premium upholstery materials</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full">
+                      <CardContent className="flex flex-col items-center justify-center p-6 min-h-[280px]">
+                        <Shirt className="w-16 h-16 text-primary mb-4" />
+                        <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Curtain Cloth</h3>
+                        <p className="text-muted-foreground text-center font-sans text-sm">Designer patterns & custom sizing options</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full">
+                      <CardContent className="flex flex-col items-center justify-center p-6 min-h-[280px]">
+                        <Package className="w-16 h-16 text-primary mb-4" />
+                        <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Bean Bags</h3>
+                        <p className="text-muted-foreground text-center font-sans text-sm">Stylish & comfortable for modern living</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full">
+                      <CardContent className="flex flex-col items-center justify-center p-6 min-h-[280px]">
+                        <Bed className="w-16 h-16 text-primary mb-4" />
+                        <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Pillows & Toppers</h3>
+                        <p className="text-muted-foreground text-center font-sans text-sm">Enhanced comfort & support solutions</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full">
+                      <CardContent className="flex flex-col items-center justify-center p-6 min-h-[280px]">
+                        <CheckCircle className="w-16 h-16 text-primary mb-4" />
+                        <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Mattress Protectors</h3>
+                        <p className="text-muted-foreground text-center font-sans text-sm">Waterproof & breathable protection</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
