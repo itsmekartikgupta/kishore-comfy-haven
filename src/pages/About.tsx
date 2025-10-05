@@ -45,10 +45,10 @@ const About = () => {
       <section className="relative min-h-[50vh] flex items-center justify-center px-4 overflow-hidden pt-32 pb-16" aria-label="About Hero">
         <div
           className="absolute inset-0 opacity-90"
-          style={{ background: 'linear-gradient(135deg, hsl(210 60% 55%) 0%, hsl(210 50% 45%) 100%)' }}
+          style={{ background: 'var(--hero-gradient)' }}
         >
-          <div className="absolute inset-0 opacity-20" style={{
-            background: 'radial-gradient(circle at 30% 50%, hsl(210 60% 40% / 0.3), transparent 50%)'
+          <div className="absolute inset-0 opacity-30" style={{
+            background: 'radial-gradient(circle at 30% 50%, hsla(220, 18%, 88%, 0.14), transparent 55%)'
           }} />
         </div>
 
@@ -82,28 +82,28 @@ const About = () => {
               <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6">
                   <Users className="w-12 h-12 mx-auto text-primary mb-3" />
-                  <p className="text-3xl font-bold text-foreground mb-2 font-sans">5000+</p>
+                  <p className="text-3xl font-bold text-foreground mb-2 font-sans">35000+</p>
                   <p className="text-sm text-muted-foreground font-sans">Happy Customers</p>
                 </CardContent>
               </Card>
               <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6">
                   <Award className="w-12 h-12 mx-auto text-primary mb-3" />
-                  <p className="text-3xl font-bold text-foreground mb-2 font-sans">30+</p>
+                  <p className="text-3xl font-bold text-foreground mb-2 font-sans">25+</p>
                   <p className="text-sm text-muted-foreground font-sans">Years Experience</p>
                 </CardContent>
               </Card>
               <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6">
                   <Bed className="w-12 h-12 mx-auto text-primary mb-3" />
-                  <p className="text-3xl font-bold text-foreground mb-2 font-sans">100+</p>
+                  <p className="text-3xl font-bold text-foreground mb-2 font-sans">200+</p>
                   <p className="text-sm text-muted-foreground font-sans">Product Varieties</p>
                 </CardContent>
               </Card>
               <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="pt-6">
                   <CheckCircle className="w-12 h-12 mx-auto text-primary mb-3" />
-                  <p className="text-3xl font-bold text-foreground mb-2 font-sans">4.95</p>
+                  <p className="text-3xl font-bold text-foreground mb-2 font-sans">4.99/5</p>
                   <p className="text-sm text-muted-foreground font-sans">Customer Rating</p>
                 </CardContent>
               </Card>
@@ -183,12 +183,12 @@ const About = () => {
             <div className="flex flex-col items-center">
               <Phone className="w-8 h-8 text-primary mb-2" />
               <p className="text-sm text-muted-foreground mb-1 font-sans">Phone</p>
-              <a href="tel:+919999999999" className="text-foreground font-semibold hover:text-primary transition-colors font-sans">+91 99999 99999</a>
+              <a href="tel:+919417151386" className="text-foreground font-semibold hover:text-primary transition-colors font-sans">+91 9417151386</a>
             </div>
             <div className="flex flex-col items-center">
               <Mail className="w-8 h-8 text-primary mb-2" />
               <p className="text-sm text-muted-foreground mb-1 font-sans">Email</p>
-              <a href="mailto:info@kishorefoam.com" className="text-foreground font-semibold hover:text-primary transition-colors font-sans">info@kishorefoam.com</a>
+              <a href="mailto:kishore_foam@rediffmail.com" className="text-foreground font-semibold hover:text-primary transition-colors font-sans">kishore_foam@rediffmail.com</a>
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-primary mb-2" />

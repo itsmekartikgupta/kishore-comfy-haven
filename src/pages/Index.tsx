@@ -214,7 +214,7 @@ const Index = () => {
                     ))}
                   </div>
                   <div className="text-left">
-                    <div className="font-bold text-foreground text-base group-hover:text-primary transition-colors font-sans">4.95/5</div>
+                    <div className="font-bold text-foreground text-base group-hover:text-primary transition-colors font-sans">4.99/5</div>
                     <div className="text-muted-foreground text-sm font-sans">Rating</div>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors ml-1" />
@@ -790,7 +790,7 @@ const Index = () => {
                         <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
                       ))}
                     </div>
-                    <span className="text-2xl font-bold text-foreground">4.95/5</span>
+                    <span className="text-2xl font-bold text-foreground">4.99/5</span>
                     <span className="text-muted-foreground">Google Rating</span>
                   </div>
                   <p className="text-muted-foreground mb-4">
