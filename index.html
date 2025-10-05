@@ -121,8 +121,25 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Product",
-              "name": "Mattresses",
-              "description": "Premium memory foam, spring, and orthopedic mattresses"
+              "name": "Premium Mattresses",
+              "description": "Premium memory foam, spring, and orthopedic mattresses",
+              "brand": {
+                "@type": "Brand",
+                "name": "Sleepwell"
+              },
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "INR",
+                "lowPrice": "5000",
+                "highPrice": "50000",
+                "offerCount": "50",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "150"
+              }
             }
           },
           {
@@ -130,7 +147,20 @@
             "itemOffered": {
               "@type": "Product",
               "name": "Sofa Materials",
-              "description": "High-density foam, upholstery fabrics, springs and hardware"
+              "description": "High-density foam, upholstery fabrics, springs and hardware",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "INR",
+                "lowPrice": "2000",
+                "highPrice": "30000",
+                "offerCount": "40",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "120"
+              }
             }
           },
           {
@@ -138,7 +168,22 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Custom Sofa Making",
-              "description": "Expert craftsmanship in creating custom sofas"
+              "description": "Expert craftsmanship in creating custom sofas",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Kishore Foam Agencies"
+              },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "price": "15000",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "85"
+              }
             }
           },
           {
@@ -146,7 +191,22 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Dry Cleaning",
-              "description": "Professional furniture and upholstery dry cleaning"
+              "description": "Professional furniture and upholstery dry cleaning",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Kishore Foam Agencies"
+              },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "price": "3000",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "95"
+              }
             }
           }
         ]

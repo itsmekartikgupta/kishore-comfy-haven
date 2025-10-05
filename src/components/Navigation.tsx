@@ -33,13 +33,13 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: "Home", id: "home" },
-    { label: "Products", id: "products" },
-    { label: "Services", id: "services" }
+    { label: "Home", id: "home" }
   ];
 
   const pageLinks = [
     { label: "About", to: "/about" },
+    { label: "Products", to: "/products" },
+    { label: "Services", to: "/services" },
     { label: "Blogs", to: "/blogs" }
   ];
 
