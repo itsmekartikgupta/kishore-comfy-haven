@@ -818,21 +818,27 @@ const Index = () => {
               <Card className="p-0 overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="h-[400px] w-full">
                   <iframe
-                    src="https://maps.google.com/maps?q=Kishore+Foam+Agencies+SCO+63+Sector+11+Panchkula&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13719.5!2d76.854!3d30.694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sKishore+Foam+Agencies+Panchkula!5e0!3m2!1sen!2sin!4v1234567890"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Kishore Foam Agencies - SCO 63, Sector 11, Panchkula"
+                    title="Kishore Foam Agencies Locations - Panchkula"
                   />
                 </div>
                 <div className="p-4 bg-muted/50">
-                  <p className="text-sm text-muted-foreground text-center">
-                    <MapPin className="w-4 h-4 inline mr-1" />
-                    Visit us at SCO 63, Sector 11, Panchkula
-                  </p>
+                  <div className="text-sm text-muted-foreground text-center space-y-1">
+                    <p>
+                      <MapPin className="w-4 h-4 inline mr-1" />
+                      SCO 63, Sector 11, Panchkula
+                    </p>
+                    <p>
+                      <MapPin className="w-4 h-4 inline mr-1" />
+                      SCO 28, Sector 5, MDC, Panchkula
+                    </p>
+                  </div>
                 </div>
               </Card>
             </div>
