@@ -14,6 +14,7 @@ import sofaHero from "@/assets/sofa-hero.jpg";
 import sleepwellLogo from "@/assets/sleepwell-logo.png";
 import ddecorLogo from "@/assets/ddecor-logo.png";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -23,6 +24,17 @@ const Index = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Scroll animations for each section
+  const metricsAnimation = useScrollAnimation();
+  const aboutAnimation = useScrollAnimation();
+  const featuredAnimation = useScrollAnimation();
+  const productsAnimation = useScrollAnimation();
+  const servicesAnimation = useScrollAnimation();
+  const brandsAnimation = useScrollAnimation();
+  const contactAnimation = useScrollAnimation();
+  const faqAnimation = useScrollAnimation();
+  const testimonialsAnimation = useScrollAnimation();
 
   const metrics = [
     {
@@ -227,7 +239,10 @@ const Index = () => {
 
       {/* Key Metrics Section */}
       <section
-        className="relative py-20 px-4"
+        ref={metricsAnimation.ref as any}
+        className={`relative py-20 px-4 transition-all duration-1000 ${
+          metricsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
         style={{ background: 'var(--gradient-subtle)' }}
         aria-label="Impact metrics"
       >
@@ -274,7 +289,15 @@ const Index = () => {
       <div className="h-16 md:h-32 bg-gradient-to-b from-white/10 via-white/5 to-transparent"></div>
 
       {/* About Us Section */}
-      <section id="about" className="py-20 px-4 animate-fade-in" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="About Us">
+      <section 
+        id="about" 
+        ref={aboutAnimation.ref as any}
+        className={`py-20 px-4 transition-all duration-1000 ${
+          aboutAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+        style={{ backgroundColor: 'hsl(var(--section-bg))' }} 
+        aria-label="About Us"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans animate-slide-up">About Us</h2>
@@ -321,7 +344,13 @@ const Index = () => {
       <div className="h-32 bg-gradient-to-b from-transparent via-white/5 to-white/10"></div>
 
       {/* Featured Products Carousel */}
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/20" aria-label="Featured Products">
+      <section 
+        ref={featuredAnimation.ref as any}
+        className={`py-20 px-4 bg-gradient-to-b from-background to-muted/20 transition-all duration-1000 ${
+          featuredAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+        aria-label="Featured Products"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Featured Products</h2>
@@ -422,7 +451,14 @@ const Index = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 px-4 bg-background" aria-label="Our Products">
+      <section 
+        id="products" 
+        ref={productsAnimation.ref as any}
+        className={`py-20 px-4 bg-background transition-all duration-1000 ${
+          productsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+        aria-label="Our Products"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Our Products</h2>
@@ -553,7 +589,15 @@ const Index = () => {
       <div className="h-24 bg-gradient-to-b from-transparent via-white/5 to-white/10"></div>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="Our Services">
+      <section 
+        id="services" 
+        ref={servicesAnimation.ref as any}
+        className={`py-20 px-4 transition-all duration-1000 ${
+          servicesAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+        style={{ backgroundColor: 'hsl(var(--section-bg))' }} 
+        aria-label="Our Services"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Services</h2>
@@ -624,7 +668,14 @@ const Index = () => {
       <div className="h-24 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* Brands Section */}
-      <section id="brands" className="py-20 px-4 bg-background" aria-label="Trusted Brands">
+      <section 
+        id="brands" 
+        ref={brandsAnimation.ref as any}
+        className={`py-20 px-4 bg-background transition-all duration-1000 ${
+          brandsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+        aria-label="Trusted Brands"
+      >
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Trusted Brands</h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -664,7 +715,15 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4" style={{ backgroundColor: 'hsl(var(--section-bg))' }} aria-label="Contact Us">
+      <section 
+        id="contact" 
+        ref={contactAnimation.ref as any}
+        className={`py-20 px-4 transition-all duration-1000 ${
+          contactAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+        style={{ backgroundColor: 'hsl(var(--section-bg))' }} 
+        aria-label="Contact Us"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Contact Us</h2>
@@ -850,7 +909,14 @@ const Index = () => {
       <div className="h-16 md:h-32 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 px-4 bg-background" aria-label="Frequently Asked Questions">
+      <section 
+        id="faq" 
+        ref={faqAnimation.ref as any}
+        className={`py-20 px-4 bg-background transition-all duration-1000 ${
+          faqAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+        aria-label="Frequently Asked Questions"
+      >
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Frequently Asked Questions</h2>
@@ -946,7 +1012,10 @@ const Index = () => {
       {/* Customer Testimonials Section */}
       <section
         id="testimonials"
-        className="relative py-20 px-4"
+        ref={testimonialsAnimation.ref as any}
+        className={`relative py-20 px-4 transition-all duration-1000 ${
+          testimonialsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
         style={{ background: 'var(--gradient-subtle)' }}
         aria-labelledby="testimonials-heading"
       >
