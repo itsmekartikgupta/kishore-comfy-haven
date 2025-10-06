@@ -193,7 +193,14 @@ const About = () => {
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-primary mb-2" />
               <p className="text-sm text-muted-foreground mb-1 font-sans">Location</p>
-              <p className="text-foreground font-semibold font-sans">Visit Our Showroom</p>
+              <a
+                href="https://maps.app.goo.gl/vGiun0QrQmhb8uaWb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-semibold hover:text-primary transition-colors font-sans"
+              >
+                Visit Our Showroom
+              </a>
             </div>
           </div>
 

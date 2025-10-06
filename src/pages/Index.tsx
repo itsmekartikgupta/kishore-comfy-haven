@@ -1210,9 +1210,9 @@ const Index = () => {
                   <MapPin className="w-4 h-4 mt-0.5" />
                   <span className="text-sm">Shop No. 57, 58, 59, 60<br />Sector 14, Panchkula, Haryana</span>
                 </a>
-                <a 
-                  href="https://maps.google.com"
-                  target="_blank" 
+                <a
+                  href="https://maps.app.goo.gl/7WgxjM7HHAkx1daHB"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-2 text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
                 >

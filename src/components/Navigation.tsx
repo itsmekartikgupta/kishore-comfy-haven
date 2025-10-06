@@ -63,7 +63,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => handleSectionNavigation(item.id)}
+                  onClick={refreshPage}
                   className="relative text-foreground hover:text-primary px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-primary/5 backdrop-blur-sm group font-sans"
                 >
                   {item.label}
@@ -108,7 +108,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => handleSectionNavigation(item.id)}
+                  onClick={refreshPage}
                   className="block text-foreground hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-300 backdrop-blur-sm font-sans"
                 >
                   {item.label}
