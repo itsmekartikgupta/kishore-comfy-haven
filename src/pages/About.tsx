@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import { Bed, CircleCheck as CheckCircle, Users, Award, Heart, Clock, Phone, Mail, MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const navigate = useNavigate();
@@ -39,6 +40,15 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>About Us - Oldest Showroom in Chandigarh Tricity | Kishore Foam Agencies</title>
+        <meta name="description" content="Learn about Kishore Foam Agencies, the oldest showroom in Chandigarh Tricity. Serving Panchkula since decades with quality mattresses and furniture solutions." />
+        <link rel="canonical" href="https://www.kishorefoam.com/about" />
+        <meta property="og:title" content="About Us - Oldest Showroom in Chandigarh Tricity | Kishore Foam Agencies" />
+        <meta property="og:description" content="Learn about Kishore Foam Agencies, the oldest showroom in Chandigarh Tricity. Serving Panchkula since decades with quality mattresses and furniture solutions." />
+        <meta property="og:url" content="https://www.kishorefoam.com/about" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Navigation />
 
       {/* Hero Section */}

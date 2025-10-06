@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CalendarDays, Clock, ArrowRight, PenSquare } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const blogPosts = [
   {
@@ -137,6 +138,15 @@ const blogPosts = [
 
 const Blogs = () => (
   <div className="min-h-screen bg-background text-foreground">
+    <Helmet>
+      <title>Blog & Tips - Mattress & Furniture Care Guide | Kishore Foam Agencies</title>
+      <meta name="description" content="Expert tips on choosing the right mattress, furniture care, and home comfort solutions. Learn from Panchkula's oldest showroom." />
+      <link rel="canonical" href="https://www.kishorefoam.com/blogs" />
+      <meta property="og:title" content="Blog & Tips - Mattress & Furniture Care Guide | Kishore Foam Agencies" />
+      <meta property="og:description" content="Expert tips on choosing the right mattress, furniture care, and home comfort solutions." />
+      <meta property="og:url" content="https://www.kishorefoam.com/blogs" />
+      <meta property="og:type" content="website" />
+    </Helmet>
     <Navigation />
     <main className="pt-28 pb-24 px-4">
       <section className="max-w-6xl mx-auto text-center mb-16" aria-label="Blogs overview">

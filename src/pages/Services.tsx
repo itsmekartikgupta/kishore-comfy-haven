@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import AppBreadcrumbs from "@/components/AppBreadcrumbs";
 import { Sofa, Bed, Sparkles } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Services = () => {
   const services = [
@@ -41,6 +42,15 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Our Services - Custom Sofa Making & Dry Cleaning | Kishore Foam Agencies</title>
+        <meta name="description" content="Expert sofa making, mattress cutting, and dry cleaning services in Panchkula. Professional furniture services with quality craftsmanship." />
+        <link rel="canonical" href="https://www.kishorefoam.com/services" />
+        <meta property="og:title" content="Our Services - Custom Sofa Making & Dry Cleaning | Kishore Foam Agencies" />
+        <meta property="og:description" content="Expert sofa making, mattress cutting, and dry cleaning services in Panchkula. Professional furniture services with quality craftsmanship." />
+        <meta property="og:url" content="https://www.kishorefoam.com/services" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Navigation />
 
       <main className="pt-24 pb-20 px-4">
