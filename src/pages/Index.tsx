@@ -1222,7 +1222,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials to Footer Gradient Transition */}
-      <div className="h-32 bg-gradient-to-b from-gray-600/20 via-gray-700/40 to-gray-800/60"></div>
+      <div className="h-32 bg-gradient-to-b from-gray-500/10 via-gray-600/30 to-gray-700/50 transition-all duration-1000 ease-in-out"></div>
 
       {/* Footer */}
       <footer className="py-16 px-4" style={{ background: 'var(--hero-gradient)' }}>
