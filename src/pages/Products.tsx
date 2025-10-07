@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import AppBreadcrumbs from "@/components/AppBreadcrumbs";
-import { Bed, Sofa, Package, Home } from "lucide-react";
+import { Bed, Sofa, Package, Chrome as Home } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
