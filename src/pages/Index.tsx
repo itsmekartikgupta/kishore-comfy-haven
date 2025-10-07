@@ -359,39 +359,45 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <Badge className="absolute top-4 right-4 bg-primary text-white">20% OFF</Badge>
+              <Badge className="absolute top-4 right-4 bg-primary text-white">SPECIAL PRICE</Badge>
               <CardHeader className="text-center">
-                <Bed className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl font-sans">Orthopedic Mattress Combo</CardTitle>
+                <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm2 0h14v14H5V5z"/>
+                  <path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h6v2H7z"/>
+                </svg>
+                <CardTitle className="text-xl font-sans">Mattress Protector Deal</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">Get 20% off on orthopedic mattresses with free pillows and protector</p>
+                <div className="mb-4 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-muted-foreground font-sans">Worth ₹3,300</span>
+                    <span className="text-2xl font-bold text-primary font-sans">₹2,000</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-muted-foreground font-sans">Worth ₹2,500</span>
+                    <span className="text-2xl font-bold text-primary font-sans">₹1,600</span>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4 font-sans text-sm">Premium mattress protectors at unbeatable prices!</p>
                 <Button className="w-full" onClick={() => scrollToSection('contact')}>Claim Offer</Button>
               </CardContent>
             </Card>
 
             <Card className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <Badge className="absolute top-4 right-4 bg-primary text-white">BUY 1 GET 1</Badge>
+              <Badge className="absolute top-4 right-4 bg-primary text-white">DIWALI SPECIAL</Badge>
               <CardHeader className="text-center">
-                <Package className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl font-sans">Bean Bag Special</CardTitle>
+                <Sparkles className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <CardTitle className="text-xl font-sans">Sleepwell Festive Offer</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">Buy one bean bag, get another at 50% off. Limited stock available!</p>
-                <Button className="w-full" onClick={() => scrollToSection('contact')}>Claim Offer</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <Badge className="absolute top-4 right-4 bg-primary text-white">FREE SERVICE</Badge>
-              <CardHeader className="text-center">
-                <Sofa className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl font-sans">Sofa Cleaning Bundle</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">Free dry cleaning service with any custom sofa order this month</p>
+                <p className="text-muted-foreground mb-4 font-sans">Get one pair of Sleepwell pillows and a bedsheet absolutely FREE with every Sleepwell mattress purchase!</p>
+                <ul className="space-y-2 text-sm text-muted-foreground font-sans mb-4">
+                  <li>• Free Sleepwell pillows (pair)</li>
+                  <li>• Free bedsheet</li>
+                  <li>• Limited period offer</li>
+                </ul>
                 <Button className="w-full" onClick={() => scrollToSection('contact')}>Claim Offer</Button>
               </CardContent>
             </Card>
@@ -421,6 +427,11 @@ const Index = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
             className="w-full max-w-5xl mx-auto"
           >
             <CarouselContent>
