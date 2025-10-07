@@ -343,110 +343,59 @@ const Index = () => {
       {/* Gradient Transition */}
       <div className="h-32 bg-gradient-to-b from-transparent via-white/5 to-white/10"></div>
 
-      {/* Featured Products Carousel */}
+      {/* Special Offers Section */}
       <section 
         ref={featuredAnimation.ref as any}
         className={`py-20 px-4 bg-gradient-to-b from-background to-muted/20 transition-all duration-1000 ${
           featuredAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
-        aria-label="Featured Products"
+        aria-label="Special Offers"
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Featured Products</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Special Offers</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
-              Explore our most popular comfort solutions
+              Limited time deals on premium comfort solutions
             </p>
           </div>
           
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 3000,
-              }),
-            ]}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="h-full">
-                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
-                      <Bed className="w-16 h-16 text-primary mb-4" />
-                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Premium Mattresses</h3>
-                      <p className="text-muted-foreground text-center font-sans">Memory foam & orthopedic options for perfect sleep</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-              
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="h-full">
-                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
-                      <Sofa className="w-16 h-16 text-primary mb-4" />
-                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Custom Sofa Making</h3>
-                      <p className="text-muted-foreground text-center font-sans">High-density foam & premium upholstery materials</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-              
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="h-full">
-                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
-                      <Shirt className="w-16 h-16 text-primary mb-4" />
-                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Curtain Cloth</h3>
-                      <p className="text-muted-foreground text-center font-sans">Designer patterns & custom sizing options</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-              
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="h-full">
-                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
-                      <Package className="w-16 h-16 text-primary mb-4" />
-                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Bean Bags</h3>
-                      <p className="text-muted-foreground text-center font-sans">Stylish & comfortable for modern living</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-              
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="h-full">
-                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
-                      <Bed className="w-16 h-16 text-primary mb-4" />
-                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Pillows & Toppers</h3>
-                      <p className="text-muted-foreground text-center font-sans">Enhanced comfort & support solutions</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-              
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="h-full">
-                    <CardContent className="flex flex-col items-center justify-center p-6 min-h-[300px]">
-                      <CheckCircle className="w-16 h-16 text-primary mb-4" />
-                      <h3 className="text-xl font-semibold text-foreground mb-2 text-center font-sans">Mattress Protectors</h3>
-                      <p className="text-muted-foreground text-center font-sans">Waterproof & breathable protection</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <Badge className="absolute top-4 right-4 bg-primary text-white">20% OFF</Badge>
+              <CardHeader className="text-center">
+                <Bed className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <CardTitle className="text-xl font-sans">Orthopedic Mattress Combo</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4 font-sans">Get 20% off on orthopedic mattresses with free pillows and protector</p>
+                <Button className="w-full" onClick={() => scrollToSection('contact')}>Claim Offer</Button>
+              </CardContent>
+            </Card>
+
+            <Card className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <Badge className="absolute top-4 right-4 bg-primary text-white">BUY 1 GET 1</Badge>
+              <CardHeader className="text-center">
+                <Package className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <CardTitle className="text-xl font-sans">Bean Bag Special</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4 font-sans">Buy one bean bag, get another at 50% off. Limited stock available!</p>
+                <Button className="w-full" onClick={() => scrollToSection('contact')}>Claim Offer</Button>
+              </CardContent>
+            </Card>
+
+            <Card className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <Badge className="absolute top-4 right-4 bg-primary text-white">FREE SERVICE</Badge>
+              <CardHeader className="text-center">
+                <Sofa className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <CardTitle className="text-xl font-sans">Sofa Cleaning Bundle</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4 font-sans">Free dry cleaning service with any custom sofa order this month</p>
+                <Button className="w-full" onClick={() => scrollToSection('contact')}>Claim Offer</Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -467,121 +416,159 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <Bed className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl font-sans">Premium Mattresses</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">High-quality mattresses for optimal sleep comfort and support. Available in various sizes and firmness levels.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
-                  <li>• Memory foam mattresses</li>
-                  <li>• Spring mattresses</li>
-                  <li>• Orthopedic mattresses</li>
-                </ul>
-              </CardContent>
-            </Card>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="group hover:shadow-xl transition-all duration-300 h-full">
+                    <CardHeader className="text-center">
+                      <Bed className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                      <CardTitle className="text-xl font-sans">Premium Mattresses</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 font-sans">High-quality mattresses for optimal sleep comfort and support. Available in various sizes and firmness levels.</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                        <li>• Memory foam mattresses</li>
+                        <li>• Spring mattresses</li>
+                        <li>• Orthopedic mattresses</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <Sofa className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl font-sans">Sofa Materials</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">Premium foam and fabric materials for sofa making and upholstery work.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
-                  <li>• High-density foam</li>
-                  <li>• Upholstery fabrics</li>
-                  <li>• Springs and hardware</li>
-                </ul>
-              </CardContent>
-            </Card>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="group hover:shadow-xl transition-all duration-300 h-full">
+                    <CardHeader className="text-center">
+                      <Sofa className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                      <CardTitle className="text-xl font-sans">Sofa Materials</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 font-sans">Premium foam and fabric materials for sofa making and upholstery work.</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                        <li>• High-density foam</li>
+                        <li>• Upholstery fabrics</li>
+                        <li>• Springs and hardware</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in">
-              <CardHeader className="text-center">
-                <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 16H7V7h10v12z"/>
-                  <path d="M9 9h6v2H9zM9 13h6v2H9z"/>
-                </svg>
-                <CardTitle className="text-xl font-sans">Curtain Cloth</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">Beautiful curtain fabrics to enhance your home's aesthetic appeal.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
-                  <li>• Designer patterns</li>
-                  <li>• Blackout curtains</li>
-                  <li>• Custom sizing</li>
-                </ul>
-              </CardContent>
-            </Card>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="group hover:shadow-xl transition-all duration-300 h-full">
+                    <CardHeader className="text-center">
+                      <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 16H7V7h10v12z"/>
+                        <path d="M9 9h6v2H9zM9 13h6v2H9z"/>
+                      </svg>
+                      <CardTitle className="text-xl font-sans">Curtain Cloth</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 font-sans">Beautiful curtain fabrics to enhance your home's aesthetic appeal.</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                        <li>• Designer patterns</li>
+                        <li>• Blackout curtains</li>
+                        <li>• Custom sizing</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <Package className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl">Bean Bags</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">Comfortable and stylish bean bags for modern living spaces.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Various sizes available</li>
-                  <li>• Durable covers</li>
-                  <li>• Refillable designs</li>
-                </ul>
-              </CardContent>
-            </Card>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="group hover:shadow-xl transition-all duration-300 h-full">
+                    <CardHeader className="text-center">
+                      <Package className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                      <CardTitle className="text-xl font-sans">Bean Bags</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 font-sans">Comfortable and stylish bean bags for modern living spaces.</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                        <li>• Various sizes available</li>
+                        <li>• Durable covers</li>
+                        <li>• Refillable designs</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <Bed className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-xl font-sans">Pillows</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">Soft and supportive pillows for better sleep quality.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
-                  <li>• Memory foam pillows</li>
-                  <li>• Fiber fill pillows</li>
-                  <li>• Orthopedic pillows</li>
-                </ul>
-              </CardContent>
-            </Card>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="group hover:shadow-xl transition-all duration-300 h-full">
+                    <CardHeader className="text-center">
+                      <Bed className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
+                      <CardTitle className="text-xl font-sans">Pillows</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 font-sans">Soft and supportive pillows for better sleep quality.</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                        <li>• Memory foam pillows</li>
+                        <li>• Fiber fill pillows</li>
+                        <li>• Orthopedic pillows</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 8h16v8H4V8z"/>
-                  <path d="M6 10h2v4H6zM10 10h2v4h-2zM14 10h2v4h-2z"/>
-                </svg>
-                <CardTitle className="text-xl font-sans">Mattress Topper</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">Premium mattress toppers for enhanced comfort and support.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
-                  <li>• Memory foam toppers</li>
-                  <li>• Cooling gel toppers</li>
-                  <li>• Various thickness options</li>
-                </ul>
-              </CardContent>
-            </Card>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="group hover:shadow-xl transition-all duration-300 h-full">
+                    <CardHeader className="text-center">
+                      <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 8h16v8H4V8z"/>
+                        <path d="M6 10h2v4H6zM10 10h2v4h-2zM14 10h2v4h-2z"/>
+                      </svg>
+                      <CardTitle className="text-xl font-sans">Mattress Topper</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 font-sans">Premium mattress toppers for enhanced comfort and support.</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                        <li>• Memory foam toppers</li>
+                        <li>• Cooling gel toppers</li>
+                        <li>• Various thickness options</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <CardHeader className="text-center">
-                <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm2 0h14v14H5V5z"/>
-                  <path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h6v2H7z"/>
-                </svg>
-                <CardTitle className="text-xl font-sans">Mattress Protector</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 font-sans">Waterproof and breathable mattress protectors for hygiene.</p>
-                <ul className="space-y-2 text-sm text-muted-foreground font-sans">
-                  <li>• Waterproof protection</li>
-                  <li>• Breathable fabric</li>
-                  <li>• Easy to wash</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
+              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="group hover:shadow-xl transition-all duration-300 h-full">
+                    <CardHeader className="text-center">
+                      <svg className="w-16 h-16 mx-auto text-primary mb-4 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm2 0h14v14H5V5z"/>
+                        <path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h6v2H7z"/>
+                      </svg>
+                      <CardTitle className="text-xl font-sans">Mattress Protector</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4 font-sans">Waterproof and breathable mattress protectors for hygiene.</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground font-sans">
+                        <li>• Waterproof protection</li>
+                        <li>• Breathable fabric</li>
+                        <li>• Easy to wash</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
