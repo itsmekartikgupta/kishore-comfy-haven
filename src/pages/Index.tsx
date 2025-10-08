@@ -11,9 +11,6 @@ import { Bed, Sofa, Shirt, Package, Phone, Mail, MapPin, Clock, Star, CircleChec
 import Autoplay from "embla-carousel-autoplay";
 import mattressHero from "@/assets/mattress-hero.jpg";
 import sofaHero from "@/assets/sofa-hero.jpg";
-import sleepwellLogo from "@/assets/sleepwell-logo.png";
-import ddecorLogo from "@/assets/ddecor-logo.png";
-import sprakashLogo from "@/assets/sprakash-logo.png";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -685,11 +682,7 @@ const Index = () => {
             <Card className="p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="w-full h-32 mx-auto mb-6 flex items-center justify-center">
-                  <img 
-                    src={sleepwellLogo} 
-                    alt="Sleepwell mattress brand logo - India's most trusted mattress manufacturer" 
-                    className="max-h-full max-w-full object-contain"
-                  />
+                  <Award className="h-20 w-20 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-2 font-sans">Sleepwell</h3>
                 <p className="text-muted-foreground font-sans">India's most trusted mattress brand, offering superior comfort and support for better sleep.</p>
@@ -699,11 +692,7 @@ const Index = () => {
             <Card className="p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="w-full h-32 mx-auto mb-6 flex items-center justify-center">
-                  <img 
-                    src={ddecorLogo} 
-                    alt="D'Decor brand logo - premium home furnishing and curtain fabrics" 
-                    className="max-h-full max-w-full object-contain"
-                  />
+                  <Sparkles className="h-20 w-20 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-2 font-sans">D'Decor</h3>
                 <p className="text-muted-foreground font-sans">Premium home furnishing brand known for exquisite curtains and upholstery fabrics.</p>
@@ -713,11 +702,7 @@ const Index = () => {
             <Card className="p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="w-full h-32 mx-auto mb-6 flex items-center justify-center">
-                  <img 
-                    src={sprakashLogo} 
-                    alt="Sprakash mattress brand logo - local in-house brand with premium quality" 
-                    className="max-h-full max-w-full object-contain"
-                  />
+                  <Star className="h-20 w-20 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-2 font-sans">Sprakash</h3>
                 <p className="text-muted-foreground font-sans">Our in-house brand crafted with the best raw materials for exceptional comfort and durability.</p>

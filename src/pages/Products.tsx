@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import AppBreadcrumbs from "@/components/AppBreadcrumbs";
-import { Bed, Sofa, Package, Chrome as Home } from "lucide-react";
+import { Bed, Sofa, Package } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -98,15 +98,9 @@ const Products = () => {
 
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-sans">Our Products</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans mb-6">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
               Discover our comprehensive range of home comfort products designed to enhance your living space.
             </p>
-            <Link to="/">
-              <Button variant="outline" className="gap-2">
-                <Home className="h-4 w-4" />
-                Back to Home
-              </Button>
-            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -132,6 +126,17 @@ const Products = () => {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link to="/">
+              <Button
+                size="lg"
+                className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/90 text-white font-medium px-8 py-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                Back to Home
+              </Button>
+            </Link>
           </div>
         </div>
       </main>
